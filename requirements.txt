@@ -1,10 +1,8 @@
 fastapi
-uvicorn[standard]
-pandas
+uvicorn
+pytesseract
+pillow
 openpyxl
 transformers
-torch
-pytesseract
-Pillow
 accelerate
-python-multipart
+torch

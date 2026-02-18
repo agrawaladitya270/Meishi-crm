@@ -16,10 +16,10 @@ if tokenizer.pad_token is None:
 
 model.config.pad_token_id = tokenizer.eos_token_id
 
-def extract_with_llm(text: str):
+def parse_fields_llm(text):
 
     prompt = f"""
-Extract JSON with keys:
+Return ONLY valid JSON with keys:
 Name
 Company
 Title
@@ -34,9 +34,8 @@ Text:
 
     outputs = model.generate(
         **inputs,
-        max_new_tokens=200,
-        temperature=0,
-        pad_token_id=tokenizer.eos_token_id
+        max_new_tokens=250,
+        temperature=0
     )
 
     result = tokenizer.decode(outputs[0], skip_special_tokens=True)

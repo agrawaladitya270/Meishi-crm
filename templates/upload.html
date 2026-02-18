@@ -1,13 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meishi OCR</title>
+    <meta charset="UTF-8">
+    <title>Meishi CRM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #2d89ef;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1b5fad;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f0f4ff;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 15px;
+        }
+
+        .footer {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
-    <h2>Upload Business Card</h2>
-    <form action="/upload" enctype="multipart/form-data" method="post">
-        <input name="file" type="file">
-        <input type="submit">
+
+<div class="container">
+    <h1>Business Card Upload</h1>
+
+    <form id="uploadForm">
+        <input type="file" id="fileInput" name="file" accept="image/*" required />
+        <button type="submit">Upload & Extract</button>
     </form>
+
+    <div class="loading" id="loading">
+        Processing image... Please wait.
+    </div>
+
+    <div class="result" id="result" style="display:none;"></div>
+    <div class="error" id="error"></div>
+
+    <div class="footer">
+        OCR + Rule-based + LLM Hybrid Extraction
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById("uploadForm");
+    const loading = document.getElementById("loading");
+    const resultDiv = document.getElementById("result");
+    const errorDiv = document.getElementById("error");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const fileInput = document.getElementById("fileInput");
+        const file = fileInput.files[0];
+
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append("file", file);
+
+        loading.style.display = "block";
+        resultDiv.style.display = "none";
+        errorDiv.innerText = "";
+
+        try {
+            const response = await fetch("/upload", {
+                method: "POST",
+                body: formData
+            });
+
+            if (!response.ok) {
+                throw new Error("Server error");
+            }
+
+            const data = await response.json();
+
+            resultDiv.innerHTML = `
+                <strong>Status:</strong> ${data.status}<br><br>
+                <strong>Name:</strong> ${data.data.Name || "-"}<br>
+                <strong>Company:</strong> ${data.data.Company || "-"}<br>
+                <strong>Title:</strong> ${data.data.Title || "-"}<br>
+                <strong>Email:</strong> ${data.data.Email || "-"}<br>
+                <strong>Phone:</strong> ${data.data.Phone || "-"}
+            `;
+
+            resultDiv.style.display = "block";
+
+        } catch (err) {
+            errorDiv.innerText = "Upload failed. Please try again.";
+        }
+
+        loading.style.display = "none";
+    });
+</script>
+
 </body>
 </html>
