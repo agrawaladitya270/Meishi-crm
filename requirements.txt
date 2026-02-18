@@ -6,3 +6,4 @@ openpyxl
 transformers
 accelerate
 torch
+python-multipart
