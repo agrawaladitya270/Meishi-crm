@@ -1,9 +1,32 @@
-from openpyxl import load_workbook
+import os
+from openpyxl import load_workbook, Workbook
 from datetime import datetime
 
 EXCEL_PATH = "data/master.xlsx"
 
+HEADERS = [
+    "Name",
+    "Company",
+    "Title",
+    "Email",
+    "Phone",
+    "CreatedAt",
+    "UpdatedAt",
+    "Source"
+]
+
+def ensure_excel_exists():
+    os.makedirs("data", exist_ok=True)
+
+    if not os.path.exists(EXCEL_PATH):
+        wb = Workbook()
+        ws = wb.active
+        ws.append(HEADERS)
+        wb.save(EXCEL_PATH)
+
 def upsert_contact(data: dict, source: str):
+
+    ensure_excel_exists()
 
     wb = load_workbook(EXCEL_PATH)
     ws = wb.active
@@ -28,21 +51,22 @@ def upsert_contact(data: dict, source: str):
 
     if found_row:
         if not found_row[0].value:
-            found_row[0].value = data["Name"]
+            found_row[0].value = data.get("Name")
         if not found_row[1].value:
-            found_row[1].value = data["Company"]
+            found_row[1].value = data.get("Company")
         if not found_row[2].value:
-            found_row[2].value = data["Title"]
+            found_row[2].value = data.get("Title")
 
         found_row[6].value = now
         status = "updated"
+
     else:
         ws.append([
-            data["Name"],
-            data["Company"],
-            data["Title"],
-            data["Email"],
-            data["Phone"],
+            data.get("Name"),
+            data.get("Company"),
+            data.get("Title"),
+            data.get("Email"),
+            data.get("Phone"),
             now,
             now,
             source
