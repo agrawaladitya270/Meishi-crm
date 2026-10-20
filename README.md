@@ -124,6 +124,20 @@ Rules and settings were tuned on a separate 60-card dev set. Field scoring is st
 Per field (v7): name 99.3%, phone 97.3%, company 94.7%, title 90.7%, email 87.3%.
 The orientation model alone turned all 240 dev cards (60 cards × 0°/90°/180°/270°) the right way up.
 
+### Cards like a real phone photo (`--style corporate`)
+
+60 cards modelled on a real card: a sideways URL banner, logo and tagline, departments beside a big
+katakana or kanji name with romaji above it, an office label, TEL(代)/FAX, a licence-number footer and
+a QR block. 70% are photographed on a pale desk, mostly turned sideways.
+
+| | Mean field accuracy | All 5 fields right | Name | Company | Title | Email | Phone |
+|---|---|---|---|---|---|---|---|
+| v4 — Tesseract | 40.0% | 1.7% | 2% | 45% | 60% | 43% | 50% |
+| **v7 — default** | **95.0%** | **76.7%** | 87% | 98% | 93% | 97% | 100% |
+
+Most remaining name errors are very short katakana parts such as リー, whose long-vowel mark ー the
+text detector misses.
+
 ### Earlier steps (measured on Linux, Noto CJK / IPA fonts)
 
 The fonts differ, so compare rows within one table, not across tables (v4 scores 87.6% here, 84.0% above).
@@ -166,6 +180,7 @@ The fonts differ, so compare rows within one table, not across tables (v4 scores
   four fields on it read correctly). Add your own real cards to `data/real/` with `labels.jsonl` in
   the same format and run the same script; `data/` is never committed.
 - Vertical text (縦書き) cards are not supported yet.
+- Very short katakana name parts (リー) can lose their long-vowel mark.
 - The optional LLM fallback (`MEISHI_LLM=on`) is **not** included in the numbers above.
 
 ## Evaluate
@@ -175,6 +190,8 @@ python eval/gen_cards.py --out data/dev  --n 60  --seed 1 --split dev
 python eval/gen_cards.py --out data/test --n 150 --seed 2 --split test
 python eval/run_eval.py --data data/test --configs v4 v6 default --out results/test_v7.json
 python eval/run_eval.py --data data/test --configs default --rotate 90    # sideways photos
+python eval/gen_cards.py --out data/corporate --n 60 --seed 4 --split test --style corporate
+python eval/run_eval.py --data data/corporate --configs v4 default --out results/corporate_v7.json
 ```
 The test split uses different seeds and includes titles, departments, companies and cities that
 never appear in the dev split. CI regenerates 40 cards and fails the build if mean field accuracy
