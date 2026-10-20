@@ -30,6 +30,11 @@ FONTS = [
     ("/usr/share/fonts/opentype/noto/NotoSerifCJK-Medium.ttc", 0),
     ("/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf", 0),
     ("/usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf", 0),
+    # Windows ships these instead (used only where the Linux fonts are missing)
+    ("C:/Windows/Fonts/YuGothR.ttc", 0),
+    ("C:/Windows/Fonts/YuGothM.ttc", 0),
+    ("C:/Windows/Fonts/YuGothB.ttc", 0),
+    ("C:/Windows/Fonts/msgothic.ttc", 0),
 ]
 FONTS = [f for f in FONTS if Path(f[0]).exists()] or FONTS  # skip fonts this machine lacks
 

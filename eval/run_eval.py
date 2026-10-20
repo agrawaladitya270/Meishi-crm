@@ -27,22 +27,26 @@ from meishi.pipeline import Config, extract  # noqa: E402
 
 FIELDS = ["Name", "Company", "Title", "Email", "Phone"]
 
+TESS = {"orient": False, "reader": "tesseract"}  # Tesseract, no orientation step, as in v1-v5
 CONFIGS = {
     "v0": None,  # original notebook rules (no LLM)
-    "v1": Config(detect_card=False, flatten_light=False, target_width=0, psm=3),     # new parser only
-    "v2": Config(detect_card=True, flatten_light=False, target_width=0, psm=3),      # + card detection
-    "v3": Config(detect_card=True, flatten_light=True, target_width=0, psm=3),       # + light flattening
-    "v4_1200": Config(detect_card=True, flatten_light=True, target_width=1200, psm=3),
-    "v4_1500": Config(detect_card=True, flatten_light=True, target_width=1500, psm=3),
-    "v4_1800": Config(detect_card=True, flatten_light=True, target_width=1800, psm=3),
+    "v1": Config(detect_card=False, flatten_light=False, target_width=0, psm=3, **TESS),  # new parser only
+    "v2": Config(detect_card=True, flatten_light=False, target_width=0, psm=3, **TESS),   # + card detection
+    "v3": Config(detect_card=True, flatten_light=True, target_width=0, psm=3, **TESS),    # + light flattening
+    "v4_1200": Config(detect_card=True, flatten_light=True, target_width=1200, psm=3, **TESS),
+    "v4_1500": Config(detect_card=True, flatten_light=True, target_width=1500, psm=3, **TESS),
+    "v4_1800": Config(detect_card=True, flatten_light=True, target_width=1800, psm=3, **TESS),
 }
-CONFIGS["default"] = Config()                                   # the shipped setting
-CONFIGS["final"] = Config(name_pass=True)                       # + native-size name pass
-CONFIGS["final_no_name_pass"] = Config(name_pass=False)
-CONFIGS["final_name_by_conf"] = Config(name_pass=True, name_pass_wins=False)
+CONFIGS["v4"] = Config(**TESS)                                  # the previous default
+CONFIGS["v6"] = Config(reader="tesseract")                      # + orientation model
+CONFIGS["default"] = Config()                                   # the shipped setting (+ PaddleOCR reader)
+CONFIGS["final"] = Config(name_pass=True, **TESS)               # + native-size name pass
+CONFIGS["final_no_name_pass"] = Config(name_pass=False, **TESS)
+CONFIGS["final_name_by_conf"] = Config(name_pass=True, name_pass_wins=False, **TESS)
 for _psm in (4, 6, 11):
     for _w in (0, 1200, 1500):
-        CONFIGS[f"v5_w{_w}_psm{_psm}"] = Config(detect_card=True, flatten_light=True, target_width=_w, psm=_psm)
+        CONFIGS[f"v5_w{_w}_psm{_psm}"] = Config(detect_card=True, flatten_light=True, target_width=_w, psm=_psm,
+                                                **TESS)
 
 
 def _n(s: str) -> str:
@@ -59,16 +63,16 @@ def correct(field: str, pred: str, gt: str) -> bool:
     return _n(pred) == _n(gt)
 
 
-def run(data: Path, name: str, limit: int | None = None) -> list[dict]:
+def run(data: Path, name: str, limit: int | None = None, rotate: int = 0) -> list[dict]:
     labels = [json.loads(line) for line in open(data / "labels.jsonl", encoding="utf-8")][:limit]
     rows = []
     for lab in labels:
         path = data / lab["file"]
         t0 = time.perf_counter()
-        if CONFIGS[name] is None:
+        if CONFIGS[name] is None:  # v0 reads the file itself, so --rotate does not apply
             fields, conf = baseline.extract(str(path)), {f: 1.0 for f in FIELDS}
         else:
-            r = extract(Image.open(path), CONFIGS[name])
+            r = extract(Image.open(path).rotate(rotate, expand=True), CONFIGS[name])
             fields, conf = r["fields"], r["confidence"]
         rows.append({"id": lab["id"], "kind": lab["kind"], "lang": lab["lang"],
                      "seconds": time.perf_counter() - t0,
@@ -110,12 +114,14 @@ def main() -> None:
     ap.add_argument("--data", required=True, type=Path)
     ap.add_argument("--configs", nargs="+", default=["v0", "v1"])
     ap.add_argument("--limit", type=int)
+    ap.add_argument("--rotate", type=int, default=0, choices=[0, 90, 180, 270],
+                    help="turn every card counter-clockwise first, to test sideways photos")
     ap.add_argument("--out", type=Path)
     ap.add_argument("--min-mean-acc", type=float, help="exit 1 if the last config scores below this")
     args = ap.parse_args()
     report = {}
     for name in args.configs:
-        rows = run(args.data, name, args.limit)
+        rows = run(args.data, name, args.limit, args.rotate)
         report[name] = {"summary": summarize(rows), "routing": routing(rows) if name != "v0" else None,
                         "rows": rows}
         print(name, json.dumps(report[name]["summary"], ensure_ascii=False), flush=True)
