@@ -4,7 +4,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
-# ---- runtime stage: Tesseract with Japanese + the app, running as a non-root user ----
+# ---- runtime stage: the app and its OCR models, running as a non-root user ----
+# (Tesseract stays installed for the optional reader="tesseract" setting)
 FROM python:3.12-slim
 RUN apt-get update \
     && apt-get install -y --no-install-recommends tesseract-ocr tesseract-ocr-jpn libgl1 libglib2.0-0 \
@@ -13,6 +14,9 @@ RUN apt-get update \
 COPY --from=build /install /usr/local
 WORKDIR /app
 COPY meishi ./meishi
+# download the PaddleOCR models at build time: no slow first request, no internet needed at runtime
+ENV MEISHI_MODEL_DIR=/app/models
+RUN python -c "from meishi.ocr import _orientation_model, _paddle_reader; _orientation_model(); _paddle_reader()"
 RUN mkdir -p data && chown app:app data
 USER app
 ENV MEISHI_CONTACTS=/app/data/contacts.xlsx

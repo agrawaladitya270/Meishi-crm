@@ -17,10 +17,11 @@ jobs:
         run: ruff check .
       - name: Unit and API tests
         run: pytest -q
-      - name: Accuracy gate on 40 freshly generated cards
+      - name: Accuracy gate on 40 freshly generated cards, upright and turned sideways
         run: |
           python eval/gen_cards.py --out data/ci --n 40 --seed 3 --split test
           python eval/run_eval.py --data data/ci --configs default --min-mean-acc 0.80
+          python eval/run_eval.py --data data/ci --rotate 90 --configs default --min-mean-acc 0.80
 
   docker:
     needs: test
