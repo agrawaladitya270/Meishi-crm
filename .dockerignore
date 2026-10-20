@@ -4,6 +4,7 @@ data
 results
 tests
 eval
+docs
 **/__pycache__
 *.pyc
 .venv

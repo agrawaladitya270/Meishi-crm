@@ -1,12 +1,107 @@
 # Meishi OCR CRM
 
-Extracts **name, company, title, email and phone** from photos or scans of Japanese and English
-business cards (名刺), and saves them to a contacts sheet. Runs on CPU, no paid APIs.
+[![ci](https://github.com/agrawaladitya270/Meishi-crm/actions/workflows/ci.yml/badge.svg)](https://github.com/agrawaladitya270/Meishi-crm/actions/workflows/ci.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776AB)](pyproject.toml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
+Reads **name, company, title, email and phone** from photos or scans of Japanese and English
+business cards (名刺), and saves them to an Excel contacts sheet. Runs on CPU with Tesseract, no paid APIs.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/ui-dark.png">
+  <img alt="The upload page reading a phone photo of a Japanese business card" src="docs/ui-light.png" width="820">
+</picture>
+
+- **87.6% field accuracy** on 150 held-out test cards, up from 47.7% for the original notebook
+- **About 0.5 s per card** on one CPU core
+- Web upload page, JSON API, and a contacts sheet that updates existing rows instead of adding duplicates
+- Docker image, and CI that fails the build if accuracy drops below 80%
+
+## How it works
 
 ```
 image ──► find card + flatten perspective ──► fix lighting ──► upscale ──► Tesseract (jpn+eng)
       ──► lines with size + confidence ──► field rules ──► (optional local LLM fill) ──► JSON / Excel
 ```
+
+## Quick start
+
+**Docker** (easiest)
+
+```bash
+docker compose up --build
+```
+
+**Linux**
+
+```bash
+sudo apt-get install tesseract-ocr tesseract-ocr-jpn
+pip install -r requirements.txt
+uvicorn meishi.api:app --port 8000
+```
+
+**macOS:** `brew install tesseract tesseract-lang`, then the last two Linux lines.
+
+**Windows** (PowerShell)
+
+```powershell
+winget install UB-Mannheim.TesseractOCR
+# The installer ships English only. Put English + Japanese data in a folder you can write to:
+$td = "$env:LOCALAPPDATA\tessdata"; New-Item -ItemType Directory -Force $td | Out-Null
+Copy-Item "C:\Program Files\Tesseract-OCR\tessdata\*.traineddata" $td
+Invoke-WebRequest -UseBasicParsing https://github.com/tesseract-ocr/tessdata_fast/raw/main/jpn.traineddata -OutFile "$td\jpn.traineddata"
+
+python -m venv .venv
+.\.venv\Scripts\python -m pip install -r requirements.txt
+
+# Each time you start it:
+$env:PATH = "C:\Program Files\Tesseract-OCR;" + $env:PATH
+$env:TESSDATA_PREFIX = "$env:LOCALAPPDATA\tessdata"
+.\.venv\Scripts\python -m uvicorn meishi.api:app --port 8000
+```
+
+Then open **http://localhost:8000**.
+
+## Use it
+
+**In the browser:** open http://localhost:8000, drop in a card image (or paste one), and click
+**Read card** or **Read & save to contacts**. Fields that could not be found are flagged for review.
+
+**Through the API:**
+
+| Endpoint | What it does |
+|---|---|
+| `POST /extract` | Image in, fields out as JSON |
+| `POST /contacts` | Same, and saves the contact to the Excel sheet. A row with the same email or phone is updated, not duplicated |
+| `GET /health` | Status and version |
+| `GET /docs` | Interactive API docs |
+
+```bash
+curl -F "file=@samples/scan_en.jpg" localhost:8000/extract
+```
+
+```json
+{
+  "fields": {
+    "Name": "Tomoko Suzuki",
+    "Company": "Hikari Denshi Inc.",
+    "Title": "Marketing Dept. Senior Engineer",
+    "Email": "suzuki@hikari-d.com",
+    "Phone": "+81-52-895-6146"
+  },
+  "confidence": {"Name": 0.915, "Company": 0.917, "Title": 0.92, "Email": 0.925, "Phone": 0.915},
+  "needs_review": [],
+  "seconds": 0.506
+}
+```
+
+Images can be up to 10 MB. Settings are environment variables:
+
+| Variable | Default | Meaning |
+|---|---|---|
+| `MEISHI_CONTACTS` | `data/contacts.xlsx` | Where contacts are saved |
+| `MEISHI_LLM` | `off` | `on` lets a small local LLM fill fields the rules missed. Needs `pip install transformers torch accelerate` |
+| `MEISHI_LLM_MODEL` | `Qwen/Qwen2.5-1.5B-Instruct` | Model used when `MEISHI_LLM=on` |
 
 ## Results
 
@@ -49,22 +144,6 @@ Speed: median 0.57 s per card, p95 0.69 s, on one CPU core.
   `labels.jsonl` in the same format and run the same script.
 - The optional LLM fallback (`MEISHI_LLM=on`) is **not** included in the numbers above.
 
-## Run
-
-```bash
-# local
-sudo apt-get install tesseract-ocr tesseract-ocr-jpn
-pip install -r requirements.txt
-uvicorn meishi.api:app --port 8000
-
-# or Docker
-docker compose up --build
-
-# use it
-curl -F "file=@samples/photo_ja.jpg" localhost:8000/extract     # fields as JSON
-curl -F "file=@samples/photo_ja.jpg" localhost:8000/contacts    # extract + save to data/contacts.xlsx
-```
-
 ## Evaluate
 
 ```bash
@@ -76,12 +155,26 @@ The test split uses different seeds and includes titles, departments, companies 
 never appear in the dev split. CI regenerates 40 cards and fails the build if mean field accuracy
 drops below 80%.
 
+## Development
+
+```bash
+pip install -r requirements-dev.txt
+ruff check .
+pytest -q
+```
+
 ## Project layout
 
 ```
 meishi/   ocr.py (card detection, lighting, OCR lines) · parse.py (field rules) · pipeline.py
           baseline.py (original v0 logic, for comparison) · llm.py (optional) · store.py · api.py
+          ui.html (upload page)
 eval/     gen_cards.py (synthetic dataset) · run_eval.py (metrics, ablations, CI gate)
 tests/    parser unit tests, API tests
 results/  saved evaluation runs (dev and test)
+docs/     screenshots
 ```
+
+## License
+
+[MIT](LICENSE) © 2026 Aditya Agrawal
