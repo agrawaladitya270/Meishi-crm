@@ -1,0 +1,8199 @@
+{
+ "v0": {
+  "summary": {
+   "n": 150,
+   "field_acc": {
+    "Name": 0.193,
+    "Company": 0.58,
+    "Title": 0.44,
+    "Email": 0.507,
+    "Phone": 0.667
+   },
+   "mean_field_acc": 0.477,
+   "all_fields_correct": 0.093,
+   "mean_field_acc_photo": 0.316,
+   "mean_field_acc_scan": 0.634,
+   "mean_field_acc_en": 0.471,
+   "mean_field_acc_ja": 0.479,
+   "p50_s": 0.46,
+   "p95_s": 0.58
+  },
+  "routing": null,
+  "rows": [
+   {
+    "id": 0,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.586541335999982,
+    "pred": {
+     "Name": "岡田 健太",
+     "Company": "未来テクノ ロジー株式会社",
+     "Title": "",
+     "Email": "k-okada@mirai-tech.jp",
+     "Phone": "03-6048-5121"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 1,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.28332972900011555,
+    "pred": {
+     "Name": "木村 EF",
+     "Company": "有限会社東 邦物流",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 2,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.45112330900019515,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": "81-6-1068-6639"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 3,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.603150051999819,
+    "pred": {
+     "Name": "開発本部",
+     "Company": "富士見企画株式会社",
+     "Title": "取締役",
+     "Email": "",
+     "Phone": "078-385-9621"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 4,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5513206339999215,
+    "pred": {
+     "Name": "長谷川 Aas",
+     "Company": "",
+     "Title": "人事部取締役",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 5,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.46286870700009786,
+    "pred": {
+     "Name": "品質保証部",
+     "Company": "ひかり医療機器株式会社",
+     "Title": "",
+     "Email": "rinowe@hikari-med.com",
+     "Phone": "052-923-7864"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 6,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.534446404000164,
+    "pred": {
+     "Name": "執行役員",
+     "Company": "株式会社北斗ソリューションズ",
+     "Title": "",
+     "Email": "ishikawa@hokuto-sol.co.jp",
+     "Phone": "092-514-5156"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 7,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4432878579998487,
+    "pred": {
+     "Name": "合同会社光電子工業",
+     "Company": "",
+     "Title": "品質保証部 部長",
+     "Email": "",
+     "Phone": "03-4269-5495"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 8,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5575632929999301,
+    "pred": {
+     "Name": "営業部 係長",
+     "Company": "株式会社東邦物流",
+     "Title": "",
+     "Email": "",
+     "Phone": "090-9183-7253"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 9,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.431458996000174,
+    "pred": {
+     "Name": "加藤 健太",
+     "Company": "株式会社光電子工業",
+     "Title": "海外事業室 マネージャー",
+     "Email": "kenta.kato@hikari-d.com",
+     "Phone": "052-384-2003"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 10,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3218594329998723,
+    "pred": {
+     "Name": "",
+     "Company": "株式会社青葉商事",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 11,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.34548631400002705,
+    "pred": {
+     "Name": "合同会社  戸内マテリァ",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 12,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4612941599998521,
+    "pred": {
+     "Name": "人損保証部 主條研究員",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": "070-2909-5041"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 13,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5703344250000555,
+    "pred": {
+     "Name": "ネージャー",
+     "Company": "ひかり医療機器株式会社",
+     "Title": "",
+     "Email": "",
+     "Phone": "06-4209-2775"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 14,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5466270389999863,
+    "pred": {
+     "Name": "藤田 健一",
+     "Company": "有限会社ひかり医療機器",
+     "Title": "開発本部 主任研究員",
+     "Email": "k-fujita@hikari-med.jp",
+     "Phone": "052-727-5171"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 15,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4567059599999084,
+    "pred": {
+     "Name": "合同会社未来テクノロジー",
+     "Company": "",
+     "Title": "",
+     "Email": "kenichi.ogawa@mirai-tech.jp",
+     "Phone": "052-118-5630"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 16,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3147070899999562,
+    "pred": {
+     "Name": "社日本データサーレス",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 17,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4901967420000801,
+    "pred": {
+     "Name": "技術部 システム課人係長",
+     "Company": "株式会社東邦物流",
+     "Title": "",
+     "Email": "m-maeda@toho-log.com",
+     "Phone": "03-6703-6954"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 18,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5430979079999361,
+    "pred": {
+     "Name": "光電子工業株式全社",
+     "Company": "",
+     "Title": "品質保証部 取締役",
+     "Email": "kenta.goto@hikari-d.co.jp",
+     "Phone": "092-468-2816"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 19,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4430673659999229,
+    "pred": {
+     "Name": "",
+     "Company": "株式会社日本データサービス",
+     "Title": "",
+     "Email": "kenichi.okada@nds.com",
+     "Phone": "052-973-6750"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 20,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.33940080699994724,
+    "pred": {
+     "Name": "",
+     "Company": "Hokuto Solutions Co., Ltd.",
+     "Title": "CEO",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 21,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.18733411200014416,
+    "pred": {
+     "Name": "合同会社光電子工業",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 22,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4444562539999879,
+    "pred": {
+     "Name": "営業担当",
+     "Company": "株式会社新星",
+     "Title": "",
+     "Email": "sato@shinsei-e.co.jp",
+     "Phone": "06-3058-4052"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 23,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4959306190000916,
+    "pred": {
+     "Name": "係長",
+     "Company": "株式会社日本データサービス",
+     "Title": "",
+     "Email": "",
+     "Phone": "078-850-4211"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 24,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.38519343500001924,
+    "pred": {
+     "Name": "合同会社東邦物:",
+     "Company": "",
+     "Title": "",
+     "Email": "goto@toho-log.cojp",
+     "Phone": "052-772-1613"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 25,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.46510381699999925,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "Director",
+     "Email": "daisuke.ito@toho-log.jp",
+     "Phone": "+81-78-213-7916"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 26,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4110666679998758,
+    "pred": {
+     "Name": "山口愛",
+     "Company": "株式会社大和精機",
+     "Title": "",
+     "Email": "",
+     "Phone": "075-968-9219"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 27,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5369646320000356,
+    "pred": {
+     "Name": "亜システム",
+     "Company": "有限会社東",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 28,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.5012138669999331,
+    "pred": {
+     "Name": "",
+     "Company": "Aoba Trading Co., Ltd.",
+     "Title": "CTO",
+     "Email": "taro.shimizu@aoba.co.jp",
+     "Phone": "+81-78-787-4069"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 29,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4326847209999869,
+    "pred": {
+     "Name": "合同会社光電子工業",
+     "Company": "",
+     "Title": "",
+     "Email": "k-abe@hikari-d.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 30,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4570115330000135,
+    "pred": {
+     "Name": "マーケテインク部",
+     "Company": "東亜システム株式会社",
+     "Title": "課長",
+     "Email": "",
+     "Phone": "03-7812-7947"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 31,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.38894296200010103,
+    "pred": {
+     "Name": "小川 拓也",
+     "Company": "有限会社ひかり医療機器",
+     "Title": "",
+     "Email": "",
+     "Phone": "075-346-5571"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 32,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5340428639999573,
+    "pred": {
+     "Name": "営業部",
+     "Company": "株式会社富士見企画",
+     "Title": "",
+     "Email": "goto@fujimi.co",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 33,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.45309705500017117,
+    "pred": {
+     "Name": "加藤 汁子",
+     "Company": "有限会社日本データサービス",
+     "Title": "マネージャー",
+     "Email": "t-kato@nds.com",
+     "Phone": "075-628-4061"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 34,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3884021889998621,
+    "pred": {
+     "Name": "",
+     "Company": "未来テクノ ロジー株式会社",
+     "Title": "営業部 マネージャー",
+     "Email": "mori@mirai-tech.co.jp",
+     "Phone": "078-351-2717"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 35,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.45382865800002037,
+    "pred": {
+     "Name": "",
+     "Company": "Nippon Data Service Corporation",
+     "Title": "Manager",
+     "Email": "",
+     "Phone": "481-3-5389"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 36,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.16844112900002983,
+    "pred": {
+     "Name": "高橋 誠",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 37,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3113096399999904,
+    "pred": {
+     "Name": "執行役具",
+     "Company": "株式会社新星電機",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 38,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.48781733499981783,
+    "pred": {
+     "Name": "",
+     "Company": "Sakura Network Inc.",
+     "Title": "Sales Manager",
+     "Email": "daisuke.suzuki@sakura-net.co.jp",
+     "Phone": "+81-52-196-4291"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 39,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.43912812999997186,
+    "pred": {
+     "Name": "品質保証部",
+     "Company": "東邦物流株式会社",
+     "Title": "",
+     "Email": "hashimoto@toho-log.jp",
+     "Phone": "03-8520-3301"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 40,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.32422282900006394,
+    "pred": {
+     "Name": "福岡市",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 41,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.43205949799994414,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "Marketing Dept. Product Manager",
+     "Email": "",
+     "Phone": "+81-75-133-399"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 42,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.47729490500000793,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "Director",
+     "Email": "takahashi@midori-chem.co.jp",
+     "Phone": "+81-6-5706-3623"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 43,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.36186957399991115,
+    "pred": {
+     "Name": "株式会",
+     "Company": "",
+     "Title": "部 部長",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 44,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.26385866199984775,
+    "pred": {
+     "Name": "岡田 拓也",
+     "Company": "有限会社東邦物流",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 45,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.4280034439998417,
+    "pred": {
+     "Name": "",
+     "Company": "Consultant",
+     "Title": "",
+     "Email": "",
+     "Phone": "+81-75-663-5684"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 46,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.3688067840000713,
+    "pred": {
+     "Name": "",
+     "Company": "Aoba Trading Corporation",
+     "Title": "",
+     "Email": "goto@aoba.jp",
+     "Phone": "1-3-6024-1962"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 47,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.5073628439999993,
+    "pred": {
+     "Name": "",
+     "Company": "Toa Systems Inc.",
+     "Title": "Product Manager",
+     "Email": "ishikawa@toa-sys.com",
+     "Phone": "070-9461-7497"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 48,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.2521070719999443,
+    "pred": {
+     "Name": "係長",
+     "Company": "株式会社東亜システム",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 49,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5535915699999805,
+    "pred": {
+     "Name": "医療機器",
+     "Company": "有限会社ひかり",
+     "Title": "",
+     "Email": "takuya.abe@hikari-med.com",
+     "Phone": "052-341-7755"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 50,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.5302868359999593,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "Marketing Dept. CTO",
+     "Email": "",
+     "Phone": "+81-78-358-8788"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 51,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.6110891690000244,
+    "pred": {
+     "Name": "高橋 浩二",
+     "Company": "株式会社未来テクノロジー",
+     "Title": "海外事業室 取締役",
+     "Email": "koji.takahashi@mirai-tech.jp",
+     "Phone": "075-698-5047"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 52,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.44016684400003214,
+    "pred": {
+     "Name": "シンツニン",
+     "Company": "さくらネットワーク株式会社",
+     "Title": "",
+     "Email": "tanaka@sakura-net.co.jp",
+     "Phone": "070-9959-2491"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 53,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5579596190000302,
+    "pred": {
+     "Name": "品質保証部",
+     "Company": "有限会社瀬戸内マテリアル",
+     "Title": "",
+     "Email": "k-hashimoto@setouchi-m.co.jp",
+     "Phone": "092-637-4428"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 54,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.48734299099987766,
+    "pred": {
+     "Name": "PR 和也",
+     "Company": "",
+     "Title": "課長",
+     "Email": "",
+     "Phone": "092-296-5970"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 55,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.4776992160000191,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "Sales Manager",
+     "Email": "makoto.kobayashi@hikari-med.co.jp",
+     "Phone": "+81-52-136-9093"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 56,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.39596990299992285,
+    "pred": {
+     "Name": "医療機器",
+     "Company": "株式会社ひかり",
+     "Title": "研究開発センター 主任",
+     "Email": "k-hayashi@hikari-med.co.jp",
+     "Phone": "06-4674-3306"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 57,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.40503126499993414,
+    "pred": {
+     "Name": "",
+     "Company": "Setouchi Materials Inc.",
+     "Title": "CTO",
+     "Email": "takahashi@setouchi-m.com",
+     "Phone": "+81-6-5009-8538"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 58,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.2951389670001845,
+    "pred": {
+     "Name": "AAT 美咲",
+     "Company": "株式会社ひかり 医療機器",
+     "Title": "海外事業室 代表取締役社#",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 59,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3748335220000172,
+    "pred": {
+     "Name": "",
+     "Company": "株式会社ひかり 医療機器",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 60,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4083920850000595,
+    "pred": {
+     "Name": "橋本 真由美",
+     "Company": "株式会社新星電機",
+     "Title": "マーケティング部 プロジェクトマネージャー",
+     "Email": "",
+     "Phone": "078-502-7974"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 61,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.4701783779999005,
+    "pred": {
+     "Name": "",
+     "Company": "Hikari Medical Corporation",
+     "Title": "",
+     "Email": "ryo.kato@hikari-med.co.jp",
+     "Phone": "+81-75-150-3757"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 62,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5153374640001402,
+    "pred": {
+     "Name": "<ニムティシグ部",
+     "Company": "株式会社北キソリューションズ",
+     "Title": "代表取締役社長",
+     "Email": "t-goto@hokuto-sol.co.jp",
+     "Phone": "03-4996-9718"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 63,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5123667039999873,
+    "pred": {
+     "Name": "岡田 大",
+     "Company": "有限会社さくらネットワーク",
+     "Title": "営業部部長",
+     "Email": "daisuke.okada@sakura-net.jp",
+     "Phone": "090-1513-2988"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 64,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3476077620000524,
+    "pred": {
+     "Name": "加藤 翔太",
+     "Company": "有限会社青葉商事",
+     "Title": "取締役",
+     "Email": "",
+     "Phone": "078-881-2863"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 65,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.21765780400005497,
+    "pred": {
+     "Name": "",
+     "Company": "Toho Logistics Inc,",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 66,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.4333000470001025,
+    "pred": {
+     "Name": "",
+     "Company": "Toa Systems Inc.",
+     "Title": "CEO",
+     "Email": "tanaka@toa-sys.jp",
+     "Phone": "090-5419-8505"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 67,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5470940960001371,
+    "pred": {
+     "Name": "ees   電子工業",
+     "Company": "",
+     "Title": "",
+     "Email": "k-matsumoto@hikari-d.com",
+     "Phone": "7 100-0005"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 68,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3326489409998885,
+    "pred": {
+     "Name": "技術部 システム課",
+     "Company": "株式会社光電子 L業",
+     "Title": "代表取締役社長",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 69,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.41277188899994144,
+    "pred": {
+     "Name": "小林 太郎",
+     "Company": "光電子工業株式会社",
+     "Title": "技術部 システム課 取締役",
+     "Email": "kobayashi@hikari-d.co.jp",
+     "Phone": "090-2762-5507"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 70,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4889357800000198,
+    "pred": {
+     "Name": "林 健太",
+     "Company": "株式会社日本データサービス",
+     "Title": "",
+     "Email": "k-hayashi@nds.co.",
+     "Phone": "092-734-9269"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 71,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.508501970999987,
+    "pred": {
+     "Name": "海外事",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": "078-466-9347"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 72,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4819317379999575,
+    "pred": {
+     "Name": "",
+     "Company": "株式会社新星電",
+     "Title": "人事部部長",
+     "Email": "kenichi.yamada@shinsei-e.co.jp",
+     "Phone": "078-635-6818"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 73,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.4452868070000022,
+    "pred": {
+     "Name": "",
+     "Company": "Aoba Trading Co., Ltd.",
+     "Title": "CTO",
+     "Email": "m-kobayashi@aoba.jp",
+     "Phone": "+81-6-5295-8670"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 74,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.44359817899999143,
+    "pred": {
+     "Name": "執行役員",
+     "Company": "有限会社未来テクノロジー",
+     "Title": "",
+     "Email": "",
+     "Phone": "078-668-4637"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 75,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4659059469997828,
+    "pred": {
+     "Name": "中村 彩",
+     "Company": "有限会社青葉商事",
+     "Title": "部 代表取締役社長",
+     "Email": "nakamura@aoba.com",
+     "Phone": "078-715-4129"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 76,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4765081640000517,
+    "pred": {
+     "Name": "前田 真由美",
+     "Company": "有限会社富士見企画",
+     "Title": "開発本部 マネージャー",
+     "Email": "mayumi.maeda@fujimi.com",
+     "Phone": "075-797-3978"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 77,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5239177660000678,
+    "pred": {
+     "Name": "合同会社瀬戸内マテリアル",
+     "Company": "",
+     "Title": "R締役社長",
+     "Email": "kazuya.kimura@setouchi-m.jp",
+     "Phone": "075-391-1828"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 78,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5136887099999967,
+    "pred": {
+     "Name": "小林 美咲",
+     "Company": "有限会社北斗ソリューションズ",
+     "Title": "プロジェクトマネージャー",
+     "Email": "m-kobayashi@hokuto-sol.co.jp",
+     "Phone": "080-2835-1261"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 79,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.41058347299986053,
+    "pred": {
+     "Name": "佐々木 陽子",
+     "Company": "有限会社未来テクノロジー",
+     "Title": "代表取締役社長",
+     "Email": "sasaki@mirai-tech.co.jp",
+     "Phone": "052-188-1586"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 80,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4539778399998795,
+    "pred": {
+     "Name": "技術部 システム課",
+     "Company": "日本データサービス株式会社",
+     "Title": "",
+     "Email": "ito@nds.com",
+     "Phone": "70-7026-9811"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 81,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.2897853290000967,
+    "pred": {
+     "Name": "佐藤 浩二",
+     "Company": "株式会社富士見企画",
+     "Title": "開発本部 主任",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 82,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3907239790000858,
+    "pred": {
+     "Name": "",
+     "Company": "未来テクノロジー株式会社",
+     "Title": "",
+     "Email": "",
+     "Phone": "080-7928-494"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 83,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.33430986700000176,
+    "pred": {
+     "Name": "合同会社緑川化学",
+     "Company": "",
+     "Title": "開発本部 取締役",
+     "Email": "y-sasaki@midori-chem.co.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 84,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4348853330000111,
+    "pred": {
+     "Name": "山田 拓也",
+     "Company": "株式会社富士見企画",
+     "Title": "",
+     "Email": "takuya.yamada@fujimi.jp",
+     "Phone": "080-4256-8638"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 85,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5246386339999844,
+    "pred": {
+     "Name": "合同会社東邦物流",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": "070-4476-3458"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 86,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.48156797799993,
+    "pred": {
+     "Name": "ip 美咲",
+     "Company": "株式会社緑川化学",
+     "Title": "",
+     "Email": "",
+     "Phone": "080-1781-8693"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 87,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.2441532880000068,
+    "pred": {
+     "Name": "",
+     "Company": "Setouchi Materials Inc.",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 88,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5029427270001179,
+    "pred": {
+     "Name": "佐々木 和志",
+     "Company": "株式会社東亜システム",
+     "Title": "",
+     "Email": "kazuya.sasaki@toa-sys.jp",
+     "Phone": "06-5891-5515"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 89,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5235500310000134,
+    "pred": {
+     "Name": "区三宮町4-13-2",
+     "Company": "有限会社光電子工業",
+     "Title": "取締役",
+     "Email": "aya.tanaka@hikari-d.co.jp",
+     "Phone": "078-998-5776"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 90,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.3671124380000492,
+    "pred": {
+     "Name": "研究開発センター",
+     "Company": "株式会社新星電",
+     "Title": "主任研究員",
+     "Email": "h-okada@shinsei-e.com",
+     "Phone": "03-5836-8122"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 91,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.28363579100005154,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 92,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5053645150001103,
+    "pred": {
+     "Name": "マーケティング部",
+     "Company": "株式会社緑川化学",
+     "Title": "課長",
+     "Email": "",
+     "Phone": "078-988-4744"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 93,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5378333710000334,
+    "pred": {
+     "Name": "合同会社富士見企画",
+     "Company": "",
+     "Title": "マーケティング部 取締役",
+     "Email": "d-kato@fujimi.co.jp",
+     "Phone": "06-4088-9123"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 94,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.40259285299998737,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "",
+     "Email": "goto@fujimi.com",
+     "Phone": "092-746-4007"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 95,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3079677699997774,
+    "pred": {
+     "Name": "瀬戸内マテリ 、 会社",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 96,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.16946108100000856,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 97,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5697173529999873,
+    "pred": {
+     "Name": "執行役員",
+     "Company": "瀬戸内マテリァ    アル株式会社",
+     "Title": "",
+     "Email": "",
+     "Phone": "092-853-6319"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 98,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.431246210999916,
+    "pred": {
+     "Name": "",
+     "Company": "Aoba Trading Inc.",
+     "Title": "",
+     "Email": "maeda@aoba.jp",
+     "Phone": "+81-52-840-5014"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 99,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3100273320001179,
+    "pred": {
+     "Name": "合同会社東邦物流",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 100,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.43422751200000675,
+    "pred": {
+     "Name": "高橋 陽子",
+     "Company": "新星電機株式会社",
+     "Title": "",
+     "Email": "yoko.takahashi@shinsei-e.jp",
+     "Phone": "070-9545-8782"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 101,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.49274859899992407,
+    "pred": {
+     "Name": "",
+     "Company": "有限会社光電子工業",
+     "Title": "",
+     "Email": "",
+     "Phone": "3 092-733-8198"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 102,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4062875829999939,
+    "pred": {
+     "Name": "後藤 亮",
+     "Company": "有限会社光電子工業",
+     "Title": "代表取締役社長",
+     "Email": "",
+     "Phone": "06-2937-6863"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 103,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.5405941340000027,
+    "pred": {
+     "Name": "",
+     "Company": "Shinsei Denki Corporation",
+     "Title": "Product Manager",
+     "Email": "",
+     "Phone": "+81-3-3282-2542"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 104,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5737938769998436,
+    "pred": {
+     "Name": "井上真由美",
+     "Company": "株式会社瀬戸内マテ UP)",
+     "Title": "マネージャー",
+     "Email": "NOUE@SetOUChi-m.co",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 105,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.48499528599995756,
+    "pred": {
+     "Name": "営業部",
+     "Company": "株式会社青葉商",
+     "Title": "主任研究員",
+     "Email": "",
+     "Phone": "06-2675-2160"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 106,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.6347306339998795,
+    "pred": {
+     "Name": "研究開発センター",
+     "Company": "新星電機株式会社",
+     "Title": "代表取締役社長",
+     "Email": "",
+     "Phone": "092-776-5368"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 107,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.43834624600003735,
+    "pred": {
+     "Name": "林 死",
+     "Company": "株式会社瀬戸内マテリ アル",
+     "Title": "課長",
+     "Email": "hayashi@setouchi-m.co.jp",
+     "Phone": "03-3235-4404"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 108,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.49263627000004817,
+    "pred": {
+     "Name": "新星電機株式会",
+     "Company": "",
+     "Title": "代表取締役社長",
+     "Email": "y-yamamoto@shinsei-e.jp",
+     "Phone": "092-830-6486"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 109,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5890741190000881,
+    "pred": {
+     "Name": "営業担当",
+     "Company": "有限会社瀬戸内マテリアル",
+     "Title": "",
+     "Email": "yoko.inoue@setouchi-m.cojp",
+     "Phone": "090-1730-4542"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 110,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5299281089999113,
+    "pred": {
+     "Name": "海外事業室",
+     "Company": "有限会社東亜システム",
+     "Title": "",
+     "Email": "kenta.yamaguchi@toa-sys.jp",
+     "Phone": "06-2007-3904"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 111,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4866397270000107,
+    "pred": {
+     "Name": "開発本部 係長",
+     "Company": "株式会社瀬戸内マテリアル",
+     "Title": "",
+     "Email": "m-sasaki@setouchi-m.jp",
+     "Phone": "052-411-3335"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 112,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5895487529999173,
+    "pred": {
+     "Name": "長谷川 B",
+     "Company": "",
+     "Title": "技術部 システム課 主任",
+     "Email": "hasegawa@nds.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 113,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.514511382000137,
+    "pred": {
+     "Name": "合同会社大和精機",
+     "Company": "",
+     "Title": "",
+     "Email": "ai.kato@yamato-sk.com",
+     "Phone": "092-901-6440"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 114,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.45213324799988186,
+    "pred": {
+     "Name": "研究開発センター",
+     "Company": "株式会社光電子工業",
+     "Title": "",
+     "Email": "fujita@hikari-d.co.jp",
+     "Phone": "052-742-4250"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 115,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5765035489998809,
+    "pred": {
+     "Name": "開発本部 エンジニア",
+     "Company": "株式会社瀬戸内マテリアル",
+     "Title": "",
+     "Email": "",
+     "Phone": "052-680-4260"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 116,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.38751302600007875,
+    "pred": {
+     "Name": "人同会社大和和精機",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 117,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.47804249599994364,
+    "pred": {
+     "Name": "合同会社東邦物流",
+     "Company": "",
+     "Title": "",
+     "Email": "inoue@toho-log.jp",
+     "Phone": "078-287-1135"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 118,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.3230172940000102,
+    "pred": {
+     "Name": "",
+     "Company": "Nippon Data Service Co., Ltd.",
+     "Title": "CTO",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 119,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4776952039999287,
+    "pred": {
+     "Name": "田中 陽子",
+     "Company": "",
+     "Title": "開発本部 課長",
+     "Email": "yoko.tanaka@sakura-net.co.jp",
+     "Phone": "078-790-5794"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 120,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4376958340001238,
+    "pred": {
+     "Name": "石川 SF",
+     "Company": "光電子工業株式会社",
+     "Title": "",
+     "Email": "ishikawa@hikari-d.jp",
+     "Phone": "06-2932-9202"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 121,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.48804146499992385,
+    "pred": {
+     "Name": "",
+     "Company": "Yamato Seiki Co., Ltd.",
+     "Title": "Engineering Dept. CEO",
+     "Email": "misaki.nakamura@yamato-sk.jp",
+     "Phone": "070-4777-8415"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 122,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4873544110000694,
+    "pred": {
+     "Name": "山口 直樹",
+     "Company": "富士見企画株式会社",
+     "Title": "取締役",
+     "Email": "n-yamaguchi@fujimi.co.jp",
+     "Phone": "092-259-9614"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 123,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5024350010000944,
+    "pred": {
+     "Name": "加藤彩",
+     "Company": "有限会社光電子工業",
+     "Title": "マネージャー",
+     "Email": "aya.kato@hikari-d.jp",
+     "Phone": "03-5880-3075"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 124,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5677204820001407,
+    "pred": {
+     "Name": "池田 健太",
+     "Company": "株式会社瀬戸内マテリアル",
+     "Title": "人事部部長",
+     "Email": "ikeda@setouchi-m.com",
+     "Phone": "092-830-2049"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 125,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.381858136999881,
+    "pred": {
+     "Name": "エンジニア",
+     "Company": "有限会社富二見企画",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 126,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.2660666280000896,
+    "pred": {
+     "Name": "",
+     "Company": "Hokuto Solutions Co., Ltd,",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 127,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4958352419998846,
+    "pred": {
+     "Name": "高橋 由美",
+     "Company": "有限会社さくらネットワーク",
+     "Title": "営業部 プロジェクトマネージャー",
+     "Email": "yumi.takahashi@sakura-net.jp",
+     "Phone": "075-511-3468"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 128,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.45783458999994764,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "Product Manager",
+     "Email": "",
+     "Phone": "+81-6-6778-7471"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 129,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3815624240000943,
+    "pred": {
+     "Name": "阿部 RB",
+     "Company": "有限会社未来テクノ ロジニ",
+     "Title": "",
+     "Email": "abe@miraitech.com",
+     "Phone": "080-5044-2953"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 130,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5474044439999943,
+    "pred": {
+     "Name": "マーケティング部",
+     "Company": "",
+     "Title": "",
+     "Email": "t-maeda@nds.co.jp",
+     "Phone": "06-8960-6625"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 131,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.49246474300002774,
+    "pred": {
+     "Name": "",
+     "Company": "Consultant",
+     "Title": "",
+     "Email": "watanabe@hokuto-sol.com",
+     "Phone": "070-9325-3290"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 132,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5190236129999448,
+    "pred": {
+     "Name": "合同会社ひかり医療機器",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": "075-209-5993"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 133,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5228894070000933,
+    "pred": {
+     "Name": "後藤 浩二",
+     "Company": "株式会社青葉商事",
+     "Title": "技術部 システム課 課長",
+     "Email": "goto@aoba.co.jp",
+     "Phone": "075-397-8650"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 134,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5021736339999734,
+    "pred": {
+     "Name": "研究開発センター",
+     "Company": "株式会社大和精機",
+     "Title": "取締役",
+     "Email": "kenta.maeda@yamato-sk.co.jp",
+     "Phone": "075-288-1423"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 135,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4744643520000409,
+    "pred": {
+     "Name": "マーケティング部",
+     "Company": "株式会社緑川化学",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 136,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.3782989879998695,
+    "pred": {
+     "Name": "",
+     "Company": "Toho Logistics Co., Ltd.",
+     "Title": "",
+     "Email": "yamada@toho-log.com",
+     "Phone": "070-3466-8619"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 137,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.40755515899991224,
+    "pred": {
+     "Name": "山本 5é",
+     "Company": "株式会社光電子工業",
+     "Title": "技術部 システム課 課長",
+     "Email": "ryo.yamamoto@hikari-d.co.jp",
+     "Phone": "03-9651-2578"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 138,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3134606739999981,
+    "pred": {
+     "Name": "井上 翔太",
+     "Company": "株式会社日本データサービス",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 139,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.3318501670000842,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "R&D Center CTO",
+     "Email": "",
+     "Phone": "+81-92-732-57"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 140,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.467463306000127,
+    "pred": {
+     "Name": "",
+     "Company": "株式会社新星電",
+     "Title": "マネージャー",
+     "Email": "fujita@shinsei-e.com",
+     "Phone": "092-698-2520"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 141,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.520039911999902,
+    "pred": {
+     "Name": "営業担当",
+     "Company": "有限会社大和精機",
+     "Title": "",
+     "Email": "",
+     "Phone": "078-349-5869"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 142,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.43734274899998127,
+    "pred": {
+     "Name": "会社大和精機",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 143,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4255821730000662,
+    "pred": {
+     "Name": "合同会社光電子工業",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": "03-5393-0090"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 144,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5220566100001633,
+    "pred": {
+     "Name": "池田 健太",
+     "Company": "株式会社緑川化学",
+     "Title": "技術部 システム課 主任",
+     "Email": "k-ikeda@midori-chem.jp",
+     "Phone": "092-602-4078"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 145,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.43608530400001655,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "",
+     "Email": "aya.mori@sakura-net.jp",
+     "Phone": "+81-3-1040-9689"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 146,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.5302110529999027,
+    "pred": {
+     "Name": "",
+     "Company": "Hikari Denshi Inc.",
+     "Title": "Product Manager",
+     "Email": "ogawa@hikari-d.com",
+     "Phone": "+81-52-234-4480"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 147,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.43376755799999955,
+    "pred": {
+     "Name": "開発本部 エンジニ",
+     "Company": "株式会社日本データサービス",
+     "Title": "",
+     "Email": "megumi.mori@nds.jp",
+     "Phone": "075-199-9653"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 148,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5772306699998353,
+    "pred": {
+     "Name": "",
+     "Company": "株式会社日本データサービス",
+     "Title": "研究開発センター プロジェクトマネージャー",
+     "Email": "suzuki@nds.co.jp",
+     "Phone": "075-840-9287"
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 149,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5604397600000084,
+    "pred": {
+     "Name": "ーケティンク部",
+     "Company": "株式会社緑用",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 1.0,
+     "Company": 1.0,
+     "Title": 1.0,
+     "Email": 1.0,
+     "Phone": 1.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   }
+  ]
+ },
+ "v1": {
+  "summary": {
+   "n": 150,
+   "field_acc": {
+    "Name": 0.673,
+    "Company": 0.767,
+    "Title": 0.713,
+    "Email": 0.613,
+    "Phone": 0.693
+   },
+   "mean_field_acc": 0.692,
+   "all_fields_correct": 0.327,
+   "mean_field_acc_photo": 0.519,
+   "mean_field_acc_scan": 0.861,
+   "mean_field_acc_en": 0.832,
+   "mean_field_acc_ja": 0.655,
+   "p50_s": 0.46,
+   "p95_s": 0.57
+  },
+  "routing": [
+   {
+    "threshold": 0.5,
+    "coverage": 0.765,
+    "precision": 0.894
+   },
+   {
+    "threshold": 0.55,
+    "coverage": 0.761,
+    "precision": 0.895
+   },
+   {
+    "threshold": 0.6,
+    "coverage": 0.751,
+    "precision": 0.901
+   },
+   {
+    "threshold": 0.65,
+    "coverage": 0.739,
+    "precision": 0.908
+   },
+   {
+    "threshold": 0.7,
+    "coverage": 0.715,
+    "precision": 0.914
+   },
+   {
+    "threshold": 0.75,
+    "coverage": 0.685,
+    "precision": 0.92
+   },
+   {
+    "threshold": 0.8,
+    "coverage": 0.643,
+    "precision": 0.925
+   },
+   {
+    "threshold": 0.85,
+    "coverage": 0.585,
+    "precision": 0.932
+   },
+   {
+    "threshold": 0.9,
+    "coverage": 0.467,
+    "precision": 0.926
+   },
+   {
+    "threshold": 0.95,
+    "coverage": 0.079,
+    "precision": 0.898
+   }
+  ],
+  "rows": [
+   {
+    "id": 0,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.47570384799996646,
+    "pred": {
+     "Name": "岡田健太",
+     "Company": "未来テクノロジー株式会社",
+     "Title": "",
+     "Email": "",
+     "Phone": "03-6048-5121"
+    },
+    "conf": {
+     "Name": 0.565,
+     "Company": 0.765,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.845
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 1,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4714946130000044,
+    "pred": {
+     "Name": "Hanako Kimura",
+     "Company": "有限会社東邦物流",
+     "Title": "時保証部主任",
+     "Email": "",
+     "Phone": "052-843-8480"
+    },
+    "conf": {
+     "Name": 0.78,
+     "Company": 0.566,
+     "Title": 0.52,
+     "Email": 0.0,
+     "Phone": 0.76
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 2,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.4741996319999089,
+    "pred": {
+     "Name": "Kenta Shimizu",
+     "Company": "",
+     "Title": "Sales Divizion Senior Engineer",
+     "Email": "k-shimi2u@setouchi-n.co.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.955,
+     "Company": 0.0,
+     "Title": 0.865,
+     "Email": 0.58,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 3,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5062881040000775,
+    "pred": {
+     "Name": "藤田因子",
+     "Company": "上見企画株式会社",
+     "Title": "取締役",
+     "Email": "tomoko.fujita@fujimi.jp",
+     "Phone": "078-385-9621"
+    },
+    "conf": {
+     "Name": 0.31,
+     "Company": 0.923,
+     "Title": 0.915,
+     "Email": 0.843,
+     "Phone": 0.955
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 4,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4566915819998485,
+    "pred": {
+     "Name": "有限全社東邦物流",
+     "Company": "",
+     "Title": "人事部取締役",
+     "Email": "hasegawa@toho-log.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.66,
+     "Company": 0.0,
+     "Title": 0.912,
+     "Email": 0.25,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 5,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4151820219999536,
+    "pred": {
+     "Name": "",
+     "Company": "ひかり医療機器株式会社",
+     "Title": "営業担当",
+     "Email": "rinoue@hikari-med.com",
+     "Phone": "052-923-7864"
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.918,
+     "Title": 0.665,
+     "Email": 0.66,
+     "Phone": 0.75
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 6,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4974156270000094,
+    "pred": {
+     "Name": "石川浩ニ",
+     "Company": "株式会社北斗ソリューションズ",
+     "Title": "執行役員",
+     "Email": "ishikawa@hokuto-sol.co.jp",
+     "Phone": "092-514-5156"
+    },
+    "conf": {
+     "Name": 0.783,
+     "Company": 0.911,
+     "Title": 0.9,
+     "Email": 0.9,
+     "Phone": 0.96
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 7,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.43719080000005306,
+    "pred": {
+     "Name": "Yumi Mori",
+     "Company": "合同会社光電子工業",
+     "Title": "品質保証部部長",
+     "Email": "y-mori@hikari-d.jp",
+     "Phone": "03-4269-5495"
+    },
+    "conf": {
+     "Name": 0.95,
+     "Company": 0.933,
+     "Title": 0.913,
+     "Email": 0.925,
+     "Phone": 0.795
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 8,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5228591860000051,
+    "pred": {
+     "Name": "佐々木美咲",
+     "Company": "株式会社東邦物流",
+     "Title": "営業部係長",
+     "Email": "sasaki@toho-log.com",
+     "Phone": "090-9183-7253"
+    },
+    "conf": {
+     "Name": 0.807,
+     "Company": 0.933,
+     "Title": 0.847,
+     "Email": 0.873,
+     "Phone": 0.885
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 9,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4171871150001607,
+    "pred": {
+     "Name": "加藤健太",
+     "Company": "株式会社光電子工業",
+     "Title": "海外事業宝マネージャー",
+     "Email": "kenta.kato@hikari-d.com",
+     "Phone": "052-384-2003"
+    },
+    "conf": {
+     "Name": 0.945,
+     "Company": 0.933,
+     "Title": 0.859,
+     "Email": 0.88,
+     "Phone": 0.9
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 10,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3831863789998806,
+    "pred": {
+     "Name": "開発本",
+     "Company": "株式会社青葉商事",
+     "Title": "",
+     "Email": "",
+     "Phone": "078-364-6799"
+    },
+    "conf": {
+     "Name": 0.86,
+     "Company": 0.93,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.94
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 11,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.333812719999969,
+    "pred": {
+     "Name": "ジャー",
+     "Company": "合同会社戸内マテリァ",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.93,
+     "Company": 0.844,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 12,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4625456859998849,
+    "pred": {
+     "Name": "後藤拓也",
+     "Company": "",
+     "Title": "品質保証部主任研究員",
+     "Email": "",
+     "Phone": "070-2909-504"
+    },
+    "conf": {
+     "Name": 0.775,
+     "Company": 0.0,
+     "Title": 0.568,
+     "Email": 0.0,
+     "Phone": 0.603
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 13,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.551103927999975,
+    "pred": {
+     "Name": "Takuya Suzuki",
+     "Company": "ひかり医療機器株式会社",
+     "Title": "",
+     "Email": "takuya.suzuki@hikari-med.com",
+     "Phone": "06-4209-2775"
+    },
+    "conf": {
+     "Name": 0.925,
+     "Company": 0.927,
+     "Title": 0.0,
+     "Email": 0.853,
+     "Phone": 0.807
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 14,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5679476769998928,
+    "pred": {
+     "Name": "藤田健一",
+     "Company": "有限会社ひかり医療機器",
+     "Title": "開発本部主任研究員",
+     "Email": "k-fujita@hikari-med.jp",
+     "Phone": "052-727-5171"
+    },
+    "conf": {
+     "Name": 0.7,
+     "Company": 0.907,
+     "Title": 0.832,
+     "Email": 0.745,
+     "Phone": 0.955
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 15,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4293433309999273,
+    "pred": {
+     "Name": "小川健一",
+     "Company": "合同会社未来テクノロジー",
+     "Title": "",
+     "Email": "kenichi.ogawa@mirai-tech.jp",
+     "Phone": "052-118-5630"
+    },
+    "conf": {
+     "Name": 0.855,
+     "Company": 0.86,
+     "Title": 0.0,
+     "Email": 0.9,
+     "Phone": 0.92
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 16,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.16607152400001723,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 17,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4480404589999125,
+    "pred": {
+     "Name": "前田恵",
+     "Company": "株式会社東邦物流",
+     "Title": "技術部システム課係長",
+     "Email": "m-maeda@toho-log.com",
+     "Phone": "03-6703-6954"
+    },
+    "conf": {
+     "Name": 0.767,
+     "Company": 0.932,
+     "Title": 0.784,
+     "Email": 0.92,
+     "Phone": 0.85
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 18,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4282122040001468,
+    "pred": {
+     "Name": "後藤健太",
+     "Company": "",
+     "Title": "",
+     "Email": "kenta.goto@hikari-d.co.jp",
+     "Phone": "092-468-2816"
+    },
+    "conf": {
+     "Name": 0.925,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.92,
+     "Phone": 0.935
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 19,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4480268160000378,
+    "pred": {
+     "Name": "Kenichi Okada",
+     "Company": "株式会社日本データサービス",
+     "Title": "人事部営業担当",
+     "Email": "kenichi.okada@nds.com",
+     "Phone": "052-973-6750"
+    },
+    "conf": {
+     "Name": 0.89,
+     "Company": 0.937,
+     "Title": 0.912,
+     "Email": 0.815,
+     "Phone": 0.935
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 20,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.38425124800005506,
+    "pred": {
+     "Name": "Koji NAKAMURA",
+     "Company": "Hokuto Solutions Co., Ltd.",
+     "Title": "CEO",
+     "Email": "nakamura@hokuto-sol.jp",
+     "Phone": "+81-5 10-7634"
+    },
+    "conf": {
+     "Name": 0.915,
+     "Company": 0.895,
+     "Title": 0.92,
+     "Email": 0.815,
+     "Phone": 0.567
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 21,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.31197665099989536,
+    "pred": {
+     "Name": "青水化子",
+     "Company": "合同会社光電子工業",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.645,
+     "Company": 0.912,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 22,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.423637331000009,
+    "pred": {
+     "Name": "佐藤真由美",
+     "Company": "株式会社新星",
+     "Title": "営業担当",
+     "Email": "sato@shinsei-e.co.jp",
+     "Phone": "06-3058-4052"
+    },
+    "conf": {
+     "Name": 0.923,
+     "Company": 0.922,
+     "Title": 0.73,
+     "Email": 0.915,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 23,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4445598059999156,
+    "pred": {
+     "Name": "Tomoko Abe",
+     "Company": "株式会社日本データサービス",
+     "Title": "係長",
+     "Email": "tomoko.abe@nds.co.jp",
+     "Phone": "078-850-4211"
+    },
+    "conf": {
+     "Name": 0.92,
+     "Company": 0.924,
+     "Title": 0.89,
+     "Email": 0.932,
+     "Phone": 0.797
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 24,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.30495797599996877,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "",
+     "Email": "goto@toho-log.co.jp",
+     "Phone": "052-772-1613"
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.835,
+     "Phone": 0.87
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 25,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.4632381760000044,
+    "pred": {
+     "Name": "Daisuke ITO",
+     "Company": "Toho Logistics K.K.",
+     "Title": "Director",
+     "Email": "daisuke.ito@toho-log.jp",
+     "Phone": "+81-78-213-7916"
+    },
+    "conf": {
+     "Name": 0.905,
+     "Company": 0.917,
+     "Title": 0.92,
+     "Email": 0.885,
+     "Phone": 0.917
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 26,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4312451149999106,
+    "pred": {
+     "Name": "山口愛",
+     "Company": "株式会社大和精機",
+     "Title": "",
+     "Email": "",
+     "Phone": "075-968-9219"
+    },
+    "conf": {
+     "Name": 0.775,
+     "Company": 0.669,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.79
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 27,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.631718439999986,
+    "pred": {
+     "Name": "阿部健太",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.83,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 28,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.4682292160000543,
+    "pred": {
+     "Name": "Taro SHIMIZU",
+     "Company": "Aoba Trading Co., Ltd.",
+     "Title": "CTO",
+     "Email": "taro.shimizu@aoba.co.jp",
+     "Phone": "+81-78-787-4069"
+    },
+    "conf": {
+     "Name": 0.91,
+     "Company": 0.912,
+     "Title": 0.92,
+     "Email": 0.86,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 29,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4818624819999968,
+    "pred": {
+     "Name": "阿部浩二",
+     "Company": "合同会社光 6",
+     "Title": "",
+     "Email": "k-abe@hikari-d.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.61,
+     "Company": 0.748,
+     "Title": 0.0,
+     "Email": 0.725,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 30,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5045680709999942,
+    "pred": {
+     "Name": "中村翔太",
+     "Company": "ュョシステム株式会社",
+     "Title": "課長",
+     "Email": "shota.nakamura@toa-sys.co.jp",
+     "Phone": "03-7812-7947"
+    },
+    "conf": {
+     "Name": 0.8,
+     "Company": 0.805,
+     "Title": 0.96,
+     "Email": 0.838,
+     "Phone": 0.935
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 31,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.37647028499986845,
+    "pred": {
+     "Name": "小川拓也",
+     "Company": "有限会社ひかり医療機器",
+     "Title": "",
+     "Email": "takuya_ogawa@5hikari-med.jp",
+     "Phone": "075-346-5571"
+    },
+    "conf": {
+     "Name": 0.94,
+     "Company": 0.933,
+     "Title": 0.0,
+     "Email": 0.62,
+     "Phone": 0.93
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 32,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5072780160001003,
+    "pred": {
+     "Name": "後藤浩二",
+     "Company": "株式会社富士見企画",
+     "Title": "",
+     "Email": "",
+     "Phone": "06-5529-9774"
+    },
+    "conf": {
+     "Name": 0.75,
+     "Company": 0.745,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.91
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 33,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.42614577099993767,
+    "pred": {
+     "Name": "加藤留子",
+     "Company": "有限会社日本データサービス",
+     "Title": "マネージャー",
+     "Email": "t-kato@nds.com",
+     "Phone": "075-628-4061"
+    },
+    "conf": {
+     "Name": 0.617,
+     "Company": 0.933,
+     "Title": 0.928,
+     "Email": 0.895,
+     "Phone": 0.95
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 34,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4888679200000752,
+    "pred": {
+     "Name": "PA AG",
+     "Company": "未来テクノロジー株式会社",
+     "Title": "営業部マネージャー",
+     "Email": "mori@mirai-tech.co.jp",
+     "Phone": "078-351-2717"
+    },
+    "conf": {
+     "Name": 0.54,
+     "Company": 0.899,
+     "Title": 0.894,
+     "Email": 0.83,
+     "Phone": 0.93
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 35,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.5062593779998679,
+    "pred": {
+     "Name": "Ryo HASEGAWA",
+     "Company": "Nippon Data Service Corporation",
+     "Title": "Manager",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.955,
+     "Company": 0.958,
+     "Title": 0.96,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 36,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.2634208810000018,
+    "pred": {
+     "Name": "高橋誠",
+     "Company": "有限会社大和精機",
+     "Title": "海外事業室プロジェクトマネージャー",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.9,
+     "Company": 0.829,
+     "Title": 0.922,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 37,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3267511869998998,
+    "pred": {
+     "Name": "",
+     "Company": "株式会社新星電機",
+     "Title": "執行役員",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.86,
+     "Title": 0.825,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 38,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.49720324800000526,
+    "pred": {
+     "Name": "Daisuke SUZUKI",
+     "Company": "Sakura Network Inc.",
+     "Title": "Sales Manager",
+     "Email": "daisuke.suzuki@sakura-net.co.jp",
+     "Phone": "+81-52-196-4291"
+    },
+    "conf": {
+     "Name": 0.905,
+     "Company": 0.913,
+     "Title": 0.925,
+     "Email": 0.92,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 39,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.42048727599990343,
+    "pred": {
+     "Name": "橋本陽子",
+     "Company": "東邦物流株式会社",
+     "Title": "係長",
+     "Email": "hashimoto@toho-log.jp",
+     "Phone": "03-8520-3301"
+    },
+    "conf": {
+     "Name": 0.955,
+     "Company": 0.93,
+     "Title": 0.95,
+     "Email": 0.91,
+     "Phone": 0.88
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 40,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3973530660000506,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 41,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.41706642299982377,
+    "pred": {
+     "Name": "Yumi Kimura",
+     "Company": "Sakura Network K.K.",
+     "Title": "Marketing Dept, Product Manager",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.955,
+     "Company": 0.913,
+     "Title": 0.922,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 42,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.4375565820000702,
+    "pred": {
+     "Name": "Naoki TAKAHASHI",
+     "Company": "Midorikawa Chemical K.K.",
+     "Title": "Director",
+     "Email": "takahashi@midori-chem.co.jp",
+     "Phone": "+81-6-5706-3623"
+    },
+    "conf": {
+     "Name": 0.955,
+     "Company": 0.917,
+     "Title": 0.92,
+     "Email": 0.915,
+     "Phone": 0.88
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 43,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.44234322900001644,
+    "pred": {
+     "Name": "池田花子",
+     "Company": "株式会社葉商事",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.885,
+     "Company": 0.67,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 44,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.44384610699989935,
+    "pred": {
+     "Name": "岡田拓也",
+     "Company": "有限会社東邦物流",
+     "Title": "課長",
+     "Email": "takuya.okada@toho-log.com",
+     "Phone": "092-901-5891"
+    },
+    "conf": {
+     "Name": 0.84,
+     "Company": 0.853,
+     "Title": 0.96,
+     "Email": 0.705,
+     "Phone": 0.955
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 45,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.4559865749999972,
+    "pred": {
+     "Name": "Megumi IKEDA",
+     "Company": "Shinsei Denki K.K.",
+     "Title": "Consultant",
+     "Email": "megumi.ikeda@shinsei-e.com",
+     "Phone": "+81-75-663-5684"
+    },
+    "conf": {
+     "Name": 0.92,
+     "Company": 0.767,
+     "Title": 0.89,
+     "Email": 0.85,
+     "Phone": 0.895
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 46,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.36952471100016737,
+    "pred": {
+     "Name": "Yumi Goto",
+     "Company": "Aoba Trading Corporation",
+     "Title": "Engineer",
+     "Email": "goto@aoba.jp",
+     "Phone": "+81-3-6024-1962"
+    },
+    "conf": {
+     "Name": 0.96,
+     "Company": 0.917,
+     "Title": 0.96,
+     "Email": 0.86,
+     "Phone": 0.705
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 47,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.4745965120000619,
+    "pred": {
+     "Name": "Makoto ISHIKAWA",
+     "Company": "Toa Systems Inc.",
+     "Title": "Product Manager",
+     "Email": "ishikawa@toa-sys.com",
+     "Phone": "070-9461-7497"
+    },
+    "conf": {
+     "Name": 0.915,
+     "Company": 0.907,
+     "Title": 0.915,
+     "Email": 0.92,
+     "Phone": 0.93
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 48,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.6431833130000086,
+    "pred": {
+     "Name": "清水恵",
+     "Company": "株式会社東亜システム",
+     "Title": "係長",
+     "Email": "shimizu@toa-sys.com",
+     "Phone": "052-371-9501"
+    },
+    "conf": {
+     "Name": 0.885,
+     "Company": 0.831,
+     "Title": 0.85,
+     "Email": 0.37,
+     "Phone": 0.477
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 49,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.46851812899990364,
+    "pred": {
+     "Name": "阿部拓也",
+     "Company": "有限会社ひかり医療機器",
+     "Title": "",
+     "Email": "takuya.abe@hikari-med.com",
+     "Phone": "052-341-7755"
+    },
+    "conf": {
+     "Name": 0.325,
+     "Company": 0.93,
+     "Title": 0.0,
+     "Email": 0.91,
+     "Phone": 0.93
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 50,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.5451846410001053,
+    "pred": {
+     "Name": "Takuya Kato",
+     "Company": "Hikari Denshi K.K.",
+     "Title": "Marketing Dept. CTO",
+     "Email": "t-kato@hikari-d.co.jp",
+     "Phone": "+81-78-358-8788"
+    },
+    "conf": {
+     "Name": 0.955,
+     "Company": 0.843,
+     "Title": 0.95,
+     "Email": 0.762,
+     "Phone": 0.875
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 51,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.6441071520000605,
+    "pred": {
+     "Name": "高橋浩二",
+     "Company": "株式会社未来テクノロジー",
+     "Title": "海外事業室取締役",
+     "Email": "koji.takahashi@mirai-tech.jp",
+     "Phone": "075-698-5047"
+    },
+    "conf": {
+     "Name": 0.79,
+     "Company": 0.865,
+     "Title": 0.908,
+     "Email": 0.892,
+     "Phone": 0.955
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 52,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.48538069799997174,
+    "pred": {
+     "Name": "田中恵",
+     "Company": "さくらネットワーク株式会社",
+     "Title": "",
+     "Email": "",
+     "Phone": "070-9959-2491"
+    },
+    "conf": {
+     "Name": 0.75,
+     "Company": 0.93,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.875
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 53,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5345280699998511,
+    "pred": {
+     "Name": "",
+     "Company": "有限会社瀬戸内マテリアル",
+     "Title": "主任",
+     "Email": "k-hashimoto@setouchi-m.co.jp",
+     "Phone": "092-637-4428"
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.94,
+     "Title": 0.78,
+     "Email": 0.91,
+     "Phone": 0.953
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 54,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5304986720000215,
+    "pred": {
+     "Name": "",
+     "Company": "合同会社日本データサービス",
+     "Title": "課長",
+     "Email": "",
+     "Phone": "092-296-5970"
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.93,
+     "Title": 0.71,
+     "Email": 0.0,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 55,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.5686076819999926,
+    "pred": {
+     "Name": "Makoto Kobayashi",
+     "Company": "Hikari Medical K.K.",
+     "Title": "Sales Manager",
+     "Email": "makoto.kobayashi@hikari-med.co.jp",
+     "Phone": "+81-52-136-9093"
+    },
+    "conf": {
+     "Name": 0.915,
+     "Company": 0.91,
+     "Title": 0.93,
+     "Email": 0.9,
+     "Phone": 0.88
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 56,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.38661001099990244,
+    "pred": {
+     "Name": "医療機器",
+     "Company": "株式会社ひかり",
+     "Title": "研究開発センター主任",
+     "Email": "k-hayashi@hikari-med.co.jp",
+     "Phone": "06-4674-3306"
+    },
+    "conf": {
+     "Name": 0.925,
+     "Company": 0.927,
+     "Title": 0.952,
+     "Email": 0.92,
+     "Phone": 0.925
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 57,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.4136789320000389,
+    "pred": {
+     "Name": "Ryo Takahashi",
+     "Company": "Setouchi Materials Inc.",
+     "Title": "CTO",
+     "Email": "takahashi@setouchi-m.com",
+     "Phone": "+81-6-5009-8538"
+    },
+    "conf": {
+     "Name": 0.955,
+     "Company": 0.92,
+     "Title": 0.92,
+     "Email": 0.905,
+     "Phone": 0.92
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 58,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4378837110000404,
+    "pred": {
+     "Name": "木村美咲",
+     "Company": "株式会社ひかり医療機器",
+     "Title": "海外事業室代表取締役社長",
+     "Email": "misaki.kimura@hikari-med.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.075,
+     "Company": 0.931,
+     "Title": 0.87,
+     "Email": 0.765,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 59,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5146166019999328,
+    "pred": {
+     "Name": "山田恵",
+     "Company": "",
+     "Title": "取締役",
+     "Email": "",
+     "Phone": "092-321-648"
+    },
+    "conf": {
+     "Name": 0.685,
+     "Company": 0.0,
+     "Title": 0.885,
+     "Email": 0.0,
+     "Phone": 0.775
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 60,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4083184070000243,
+    "pred": {
+     "Name": "橋本真由美",
+     "Company": "株式会社新星電機",
+     "Title": "マーケティング部プロジェクトマネージャー",
+     "Email": "hashimoto@shinsei-e.jp",
+     "Phone": "078-502-7974"
+    },
+    "conf": {
+     "Name": 0.91,
+     "Company": 0.935,
+     "Title": 0.944,
+     "Email": 0.92,
+     "Phone": 0.945
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 61,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.4888575310001215,
+    "pred": {
+     "Name": "Ryo Kato",
+     "Company": "Hikari Medical Corporation",
+     "Title": "Engineering Dept. Senior Engineer",
+     "Email": "ryo.kato@hikari-med.co.jp",
+     "Phone": "+81-75-150-3757"
+    },
+    "conf": {
+     "Name": 0.94,
+     "Company": 0.92,
+     "Title": 0.922,
+     "Email": 0.855,
+     "Phone": 0.92
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 62,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5849491399999351,
+    "pred": {
+     "Name": "後藤拓也",
+     "Company": "株式会社北キソリューションズ",
+     "Title": "代表取締役社長",
+     "Email": "t-goto@hokuto-sol.co.jp",
+     "Phone": "03-4996-9718"
+    },
+    "conf": {
+     "Name": 0.37,
+     "Company": 0.926,
+     "Title": 0.882,
+     "Email": 0.885,
+     "Phone": 0.925
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 63,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5323061060000782,
+    "pred": {
+     "Name": "岡田大",
+     "Company": "有限会社さくらネットワーク",
+     "Title": "営業部部長",
+     "Email": "daisuke.okada@sakura-net.jp",
+     "Phone": "090-1513-2988"
+    },
+    "conf": {
+     "Name": 0.94,
+     "Company": 0.929,
+     "Title": 0.683,
+     "Email": 0.925,
+     "Phone": 0.88
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 64,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.21069347700017715,
+    "pred": {
+     "Name": "",
+     "Company": "有限会社青葉商事",
+     "Title": "取締役",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.863,
+     "Title": 0.925,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 65,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.21661620600002607,
+    "pred": {
+     "Name": "Shota Yoshida",
+     "Company": "Toho Logistics Inc.",
+     "Title": "Consultant",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.94,
+     "Company": 0.95,
+     "Title": 0.96,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 66,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.4135622669998611,
+    "pred": {
+     "Name": "Taro TANAKA",
+     "Company": "Toa Systems Inc.",
+     "Title": "CEO",
+     "Email": "tanaka@toa-sys.jp",
+     "Phone": "090-5419-8505"
+    },
+    "conf": {
+     "Name": 0.91,
+     "Company": 0.897,
+     "Title": 0.88,
+     "Email": 0.92,
+     "Phone": 0.92
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 67,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5383498329999838,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "外事業室執行役員",
+     "Email": "k-matsumoto@hikari-d.com",
+     "Phone": "090-7442-6997"
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.0,
+     "Title": 0.762,
+     "Email": 0.785,
+     "Phone": 0.925
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 68,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4895471679999446,
+    "pred": {
+     "Name": "佐藤美咲",
+     "Company": "株式会社光電子 Le",
+     "Title": "代表取締役社長",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.84,
+     "Company": 0.807,
+     "Title": 0.915,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 69,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4200449219999882,
+    "pred": {
+     "Name": "小林太郎",
+     "Company": "光電子工業株式会社",
+     "Title": "技術部システム課取締役",
+     "Email": "kobayashi@hikari-d.co.jp",
+     "Phone": "090-2762-5507"
+    },
+    "conf": {
+     "Name": 0.88,
+     "Company": 0.927,
+     "Title": 0.931,
+     "Email": 0.89,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 70,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5308041119999416,
+    "pred": {
+     "Name": "林健太",
+     "Company": "株式会社日本データサービス",
+     "Title": "",
+     "Email": "k-hayashi@nds.co.jp",
+     "Phone": "092-734-9269"
+    },
+    "conf": {
+     "Name": 0.895,
+     "Company": 0.938,
+     "Title": 0.0,
+     "Email": 0.695,
+     "Phone": 0.905
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 71,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4225722849998874,
+    "pred": {
+     "Name": "ARS Heaps",
+     "Company": "",
+     "Title": "iu 主任研究員",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.0,
+     "Title": 0.667,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 72,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.48103249800010417,
+    "pred": {
+     "Name": "山田健一",
+     "Company": "株式会社新星電",
+     "Title": "部部長",
+     "Email": "kenichi.yamada@shinsei-e.co.jp",
+     "Phone": "078-635-6818"
+    },
+    "conf": {
+     "Name": 0.7,
+     "Company": 0.9,
+     "Title": 0.9,
+     "Email": 0.89,
+     "Phone": 0.93
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 73,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.5363220369999908,
+    "pred": {
+     "Name": "Megumi Kobayashi",
+     "Company": "Aoba Trading Co., Ltd.",
+     "Title": "CTO",
+     "Email": "m-kobayashi@aoba.jp",
+     "Phone": "+81-6-5295-8670"
+    },
+    "conf": {
+     "Name": 0.875,
+     "Company": 0.912,
+     "Title": 0.91,
+     "Email": 0.89,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 74,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5187975520000236,
+    "pred": {
+     "Name": "松本愛",
+     "Company": "有限会社未来テクノロジー",
+     "Title": "",
+     "Email": "al.matsumoto@mirai-tech.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.71,
+     "Company": 0.9,
+     "Title": 0.0,
+     "Email": 0.49,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 75,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4969013550000909,
+    "pred": {
+     "Name": "中村彩",
+     "Company": "有限会社青葉商事",
+     "Title": "業部代表取締役社長",
+     "Email": "nakamura@aoba.com",
+     "Phone": "078-715-4129"
+    },
+    "conf": {
+     "Name": 0.853,
+     "Company": 0.948,
+     "Title": 0.915,
+     "Email": 0.905,
+     "Phone": 0.935
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 76,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5376510619998953,
+    "pred": {
+     "Name": "前田真由美",
+     "Company": "有限会社富士見企画",
+     "Title": "開発本部マネージャー",
+     "Email": "mayumi.maeda@fujimi.com",
+     "Phone": "075-797-3978"
+    },
+    "conf": {
+     "Name": 0.915,
+     "Company": 0.913,
+     "Title": 0.94,
+     "Email": 0.88,
+     "Phone": 0.91
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 77,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.6177135259999886,
+    "pred": {
+     "Name": "木村和志",
+     "Company": "合同会社瀬戸内マテリアル",
+     "Title": "代表取締役社長",
+     "Email": "kazuya.kimura@setouchi-m.jp",
+     "Phone": "075-391-1828"
+    },
+    "conf": {
+     "Name": 0.17,
+     "Company": 0.919,
+     "Title": 0.897,
+     "Email": 0.915,
+     "Phone": 0.91
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 78,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5138579859999481,
+    "pred": {
+     "Name": "小林美咲",
+     "Company": "有限会社北斗ソリューションズ",
+     "Title": "プロジェクトマネージャー",
+     "Email": "m-kobayashi@hokuto-sol.co.jp",
+     "Phone": "080-2835-1261"
+    },
+    "conf": {
+     "Name": 0.79,
+     "Company": 0.944,
+     "Title": 0.936,
+     "Email": 0.92,
+     "Phone": 0.92
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 79,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.46684080600016387,
+    "pred": {
+     "Name": "佐々木陽子",
+     "Company": "有限会社未来テクノロジー",
+     "Title": "代表取締役社長",
+     "Email": "sasaki@mirai-tech.co.jp",
+     "Phone": "052-188-1586"
+    },
+    "conf": {
+     "Name": 0.903,
+     "Company": 0.889,
+     "Title": 0.932,
+     "Email": 0.88,
+     "Phone": 0.96
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 80,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5040968799999064,
+    "pred": {
+     "Name": "伊藤陽子",
+     "Company": "",
+     "Title": "",
+     "Email": "ito@nds.com",
+     "Phone": "070-7026-9811"
+    },
+    "conf": {
+     "Name": 0.92,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.9,
+     "Phone": 0.85
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 81,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.46827596899993296,
+    "pred": {
+     "Name": "佐藤浩二",
+     "Company": "株式会社富士見企画",
+     "Title": "開発本部主任",
+     "Email": "koji.sato@fujimi.co.jp",
+     "Phone": "080-3874-6877"
+    },
+    "conf": {
+     "Name": 0.635,
+     "Company": 0.937,
+     "Title": 0.825,
+     "Email": 0.665,
+     "Phone": 0.86
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 82,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4417308409999805,
+    "pred": {
+     "Name": "",
+     "Company": "未来テクノロジー株式会社",
+     "Title": "",
+     "Email": "",
+     "Phone": "080-7928-494"
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.924,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.3
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 83,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3883074679999936,
+    "pred": {
+     "Name": "佐々木陽子",
+     "Company": "合同会社緑川化学",
+     "Title": "開発本部取締役",
+     "Email": "y-sasaki@midori-chem.co.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.933,
+     "Company": 0.944,
+     "Title": 0.78,
+     "Email": 0.8,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 84,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4756432429999222,
+    "pred": {
+     "Name": "山田拓也",
+     "Company": "株式会社富士見企画",
+     "Title": "",
+     "Email": "takuya.yamada@fujimi.jp",
+     "Phone": "080-4256-8638"
+    },
+    "conf": {
+     "Name": 0.69,
+     "Company": 0.863,
+     "Title": 0.0,
+     "Email": 0.795,
+     "Phone": 0.72
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 85,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5106042940001316,
+    "pred": {
+     "Name": "山本陽子",
+     "Company": "合同会社東邦物流",
+     "Title": "営業担当",
+     "Email": "y-yamamoto@toho-log.com",
+     "Phone": "070-4476-3458"
+    },
+    "conf": {
+     "Name": 0.96,
+     "Company": 0.942,
+     "Title": 0.955,
+     "Email": 0.68,
+     "Phone": 0.77
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 86,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5236482069999511,
+    "pred": {
+     "Name": "鈴木美咲",
+     "Company": "株式会社緑川化学",
+     "Title": "",
+     "Email": "",
+     "Phone": "080-1781-8693"
+    },
+    "conf": {
+     "Name": 0.525,
+     "Company": 0.925,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.91
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 87,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.32969866899998124,
+    "pred": {
+     "Name": "Tomoko Hasegawa",
+     "Company": "Setouchi Materials Inc.",
+     "Title": "Marketing Dept. Consultant",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.95,
+     "Company": 0.943,
+     "Title": 0.96,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 88,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.43248013400011587,
+    "pred": {
+     "Name": "佐々木和志",
+     "Company": "株式会社東亜シ",
+     "Title": "営業部エンジニア",
+     "Email": "kazuya.sasaki@toa-sys.jp",
+     "Phone": "06-5891-5515"
+    },
+    "conf": {
+     "Name": 0.81,
+     "Company": 0.917,
+     "Title": 0.946,
+     "Email": 0.915,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 89,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5255759760000274,
+    "pred": {
+     "Name": "Aya Tanaka",
+     "Company": "有限会社光電子工業",
+     "Title": "取締役",
+     "Email": "aya.tanaka@hikari-d.co.jp",
+     "Phone": "078-998-5776"
+    },
+    "conf": {
+     "Name": 0.94,
+     "Company": 0.935,
+     "Title": 0.91,
+     "Email": 0.89,
+     "Phone": 0.85
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 90,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.42437189999986913,
+    "pred": {
+     "Name": "岡田花子",
+     "Company": "株式会社新星電",
+     "Title": "主任研究員",
+     "Email": "h-okada@shinsei-e.com",
+     "Phone": "03-5836-8122"
+    },
+    "conf": {
+     "Name": 0.94,
+     "Company": 0.925,
+     "Title": 0.877,
+     "Email": 0.92,
+     "Phone": 0.925
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 91,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.30392492600003607,
+    "pred": {
+     "Name": "Ai Suzuki",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.96,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 92,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5626979810001558,
+    "pred": {
+     "Name": "佐藤彩",
+     "Company": "株式会社緑川化学",
+     "Title": "課長",
+     "Email": "ava.sato@midori-chem.jp",
+     "Phone": "078-988-4744"
+    },
+    "conf": {
+     "Name": 0.87,
+     "Company": 0.732,
+     "Title": 0.34,
+     "Email": 0.663,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 93,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.6301999650002017,
+    "pred": {
+     "Name": "加藤大輔",
+     "Company": "合同会社富士見企画",
+     "Title": "マーケティング部取締役",
+     "Email": "d-kato@fujimi.co.jp",
+     "Phone": "06-4088-9123"
+    },
+    "conf": {
+     "Name": 0.823,
+     "Company": 0.93,
+     "Title": 0.916,
+     "Email": 0.92,
+     "Phone": 0.92
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 94,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5400214329999926,
+    "pred": {
+     "Name": "後藤健一",
+     "Company": "合同会社富士見企画",
+     "Title": "執行役員",
+     "Email": "goto@fujimi.com",
+     "Phone": "092-746-4007"
+    },
+    "conf": {
+     "Name": 0.92,
+     "Company": 0.947,
+     "Title": 0.95,
+     "Email": 0.91,
+     "Phone": 0.94
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 95,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.6165064509998501,
+    "pred": {
+     "Name": "",
+     "Company": "瀬戸内マテリアル株式会社",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.901,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 96,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.3833740799998395,
+    "pred": {
+     "Name": "IMI Hitt",
+     "Company": "",
+     "Title": "",
+     "Email": "ogawa@fujimi.co.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.64,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.26,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 97,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4136621110001215,
+    "pred": {
+     "Name": "Aya Kimura",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.955,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 98,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.4132103869999355,
+    "pred": {
+     "Name": "Yumi MAEDA",
+     "Company": "Aoba Trading Inc.",
+     "Title": "Senior Engineer",
+     "Email": "maeda@aoba.jp",
+     "Phone": "+81-52-840-5014"
+    },
+    "conf": {
+     "Name": 0.95,
+     "Company": 0.923,
+     "Title": 0.955,
+     "Email": 0.855,
+     "Phone": 0.9
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 99,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.48660268200001155,
+    "pred": {
+     "Name": "井上亮",
+     "Company": "合同会社東邦物流",
+     "Title": "業担当",
+     "Email": "r-inoue@toho-log.jp",
+     "Phone": "080-183-5256"
+    },
+    "conf": {
+     "Name": 0.835,
+     "Company": 0.818,
+     "Title": 0.86,
+     "Email": 0.675,
+     "Phone": 0.58
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 100,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.44954821200008155,
+    "pred": {
+     "Name": "高橋陽子",
+     "Company": "新星電機株式会社",
+     "Title": "",
+     "Email": "yoko.takahashi@shinsei-e.jp",
+     "Phone": "070-9545-8782"
+    },
+    "conf": {
+     "Name": 0.88,
+     "Company": 0.935,
+     "Title": 0.0,
+     "Email": 0.92,
+     "Phone": 0.93
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 101,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4988380130000678,
+    "pred": {
+     "Name": "Kenta Kobayashi",
+     "Company": "有限会社光電子工業",
+     "Title": "",
+     "Email": "",
+     "Phone": "092-733-8198"
+    },
+    "conf": {
+     "Name": 0.96,
+     "Company": 0.827,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.7
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 102,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.40516820400011966,
+    "pred": {
+     "Name": "後藤亮",
+     "Company": "有限会社光電子工業",
+     "Title": "代表取締役社長",
+     "Email": "",
+     "Phone": "06-2937-6863"
+    },
+    "conf": {
+     "Name": 0.905,
+     "Company": 0.915,
+     "Title": 0.935,
+     "Email": 0.0,
+     "Phone": 0.9
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 103,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.5053207870000733,
+    "pred": {
+     "Name": "Daisuke ABE",
+     "Company": "Shinsei Denki Corporation",
+     "Title": "Product Manager",
+     "Email": "abe@shinsei-e.co.jp",
+     "Phone": "+81-3-3282-2542"
+    },
+    "conf": {
+     "Name": 0.91,
+     "Company": 0.913,
+     "Title": 0.92,
+     "Email": 0.83,
+     "Phone": 0.825
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 104,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5137570689998938,
+    "pred": {
+     "Name": "井上真由和美",
+     "Company": "株式会社瀬戸内マテリア",
+     "Title": "マネージャー",
+     "Email": "m.nouc@setouchi-m.co.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.747,
+     "Company": 0.774,
+     "Title": 0.92,
+     "Email": 0.497,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 105,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.46154681600000913,
+    "pred": {
+     "Name": "Ryo Okada",
+     "Company": "株式会社青葉商",
+     "Title": "主任研究貞",
+     "Email": "",
+     "Phone": "06-2675-2160"
+    },
+    "conf": {
+     "Name": 0.94,
+     "Company": 0.927,
+     "Title": 0.883,
+     "Email": 0.0,
+     "Phone": 0.902
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 106,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.570055592000017,
+    "pred": {
+     "Name": "田中浩二",
+     "Company": "新星電機株式会社",
+     "Title": "代表取締役社長",
+     "Email": "koji.tanaka@shinsei-e.co.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.815,
+     "Company": 0.937,
+     "Title": 0.927,
+     "Email": 0.828,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 107,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4664869319999525,
+    "pred": {
+     "Name": "Ryo Hayashi",
+     "Company": "株式会社瀬戸内マテリアル",
+     "Title": "課長",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.93,
+     "Company": 0.922,
+     "Title": 0.96,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 108,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.46706038700017416,
+    "pred": {
+     "Name": "山本陽子",
+     "Company": "新星電機株式会社",
+     "Title": "代表取締役社長",
+     "Email": "y-yamamoto@shinsei-e.jp",
+     "Phone": "092-830-6486"
+    },
+    "conf": {
+     "Name": 0.89,
+     "Company": 0.918,
+     "Title": 0.938,
+     "Email": 0.845,
+     "Phone": 0.9
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 109,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.480157853000037,
+    "pred": {
+     "Name": "井上陽子",
+     "Company": "有限会社瀬戸内マテリアル",
+     "Title": "営業担当",
+     "Email": "yokoinoue@setouchi-m.co.jp",
+     "Phone": "090-1730-4542"
+    },
+    "conf": {
+     "Name": 0.84,
+     "Company": 0.941,
+     "Title": 0.96,
+     "Email": 0.745,
+     "Phone": 0.865
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 110,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.49183584299998984,
+    "pred": {
+     "Name": "山口健太",
+     "Company": "有限会社東亜システム",
+     "Title": "営業担当",
+     "Email": "kenta.yamaguchi@toa-sys.jp",
+     "Phone": "06-2007-3904"
+    },
+    "conf": {
+     "Name": 0.925,
+     "Company": 0.906,
+     "Title": 0.695,
+     "Email": 0.91,
+     "Phone": 0.922
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 111,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.3720270569999684,
+    "pred": {
+     "Name": "佐々木恵",
+     "Company": "株式会社瀬戸内マテリアル",
+     "Title": "開発本部係長",
+     "Email": "m-sasaki@setouchi-m.jp",
+     "Phone": "052-411-3335"
+    },
+    "conf": {
+     "Name": 0.903,
+     "Company": 0.936,
+     "Title": 0.94,
+     "Email": 0.91,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 112,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5164765649999481,
+    "pred": {
+     "Name": "Megumi Hasegawa",
+     "Company": "合同会社日本データサービス",
+     "Title": "技術部システム課主任",
+     "Email": "hasegawa@nds.jp",
+     "Phone": "075-531-2135"
+    },
+    "conf": {
+     "Name": 0.96,
+     "Company": 0.899,
+     "Title": 0.928,
+     "Email": 0.92,
+     "Phone": 0.95
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 113,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.5072119699998439,
+    "pred": {
+     "Name": "加藤愛",
+     "Company": "合同会社大和精機",
+     "Title": "人事部営業担当",
+     "Email": "ai.kato@yamato-sk.com",
+     "Phone": "092-901-6440"
+    },
+    "conf": {
+     "Name": 0.92,
+     "Company": 0.774,
+     "Title": 0.834,
+     "Email": 0.895,
+     "Phone": 0.96
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 114,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.38083838900001865,
+    "pred": {
+     "Name": "藤田愛",
+     "Company": "株式会社光電子工業",
+     "Title": "営業担当",
+     "Email": "fujita@hikari-d.co.jp",
+     "Phone": "052-742-4250"
+    },
+    "conf": {
+     "Name": 0.86,
+     "Company": 0.929,
+     "Title": 0.855,
+     "Email": 0.91,
+     "Phone": 0.93
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 115,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4799841430001379,
+    "pred": {
+     "Name": "佐々木陽子",
+     "Company": "株式会社瀬戸内マテリアル",
+     "Title": "開発本部エンジニア",
+     "Email": "y-sasaki@setouchim.com",
+     "Phone": "052-680-4260"
+    },
+    "conf": {
+     "Name": 0.913,
+     "Company": 0.936,
+     "Title": 0.95,
+     "Email": 0.587,
+     "Phone": 0.88
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 116,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.468586379999806,
+    "pred": {
+     "Name": "Koji Fujita",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.8,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 117,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.41201248300012594,
+    "pred": {
+     "Name": "井上翔太",
+     "Company": "合同会社東邦物流",
+     "Title": "海外事業室エンジニア",
+     "Email": "inoue@toho-log.jp",
+     "Phone": "078-287-1135"
+    },
+    "conf": {
+     "Name": 0.7,
+     "Company": 0.948,
+     "Title": 0.935,
+     "Email": 0.905,
+     "Phone": 0.91
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 118,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.2701874780000253,
+    "pred": {
+     "Name": "Hanako TAKAHASHI",
+     "Company": "Nippon Data Service Co., Ltd.",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.91,
+     "Company": 0.898,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 119,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.41514937099987037,
+    "pred": {
+     "Name": "田中陽子",
+     "Company": "合同会社さくらネットワーク",
+     "Title": "開発本部課長",
+     "Email": "yoko.tanaka@sakura-net.co.jp",
+     "Phone": "078-790-5794"
+    },
+    "conf": {
+     "Name": 0.93,
+     "Company": 0.933,
+     "Title": 0.9,
+     "Email": 0.925,
+     "Phone": 0.94
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 120,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.42020032499999616,
+    "pred": {
+     "Name": "",
+     "Company": "光電子工業株式会社",
+     "Title": "エンジニア",
+     "Email": "ishikawa@hikari-d.jp",
+     "Phone": "06-2932-9202"
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.927,
+     "Title": 0.937,
+     "Email": 0.875,
+     "Phone": 0.925
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 121,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.46268200999998044,
+    "pred": {
+     "Name": "Misaki Nakamura",
+     "Company": "Yamato Seiki Co., Ltd.",
+     "Title": "Engineering Dept. CEO",
+     "Email": "misaki.nakamura@yamato-sk.jp",
+     "Phone": "070-4777-8415"
+    },
+    "conf": {
+     "Name": 0.91,
+     "Company": 0.912,
+     "Title": 0.89,
+     "Email": 0.925,
+     "Phone": 0.875
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 122,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.4790227819999018,
+    "pred": {
+     "Name": "山口直樹",
+     "Company": "富士見企画株式会社",
+     "Title": "取締役",
+     "Email": "",
+     "Phone": "092-259-9614"
+    },
+    "conf": {
+     "Name": 0.77,
+     "Company": 0.903,
+     "Title": 0.92,
+     "Email": 0.0,
+     "Phone": 0.925
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 123,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4322766079999383,
+    "pred": {
+     "Name": "加藤彩",
+     "Company": "有限会社光電子工業",
+     "Title": "マネージャー",
+     "Email": "aya.kato@hikari-d.jp",
+     "Phone": "03-5880-3075"
+    },
+    "conf": {
+     "Name": 0.61,
+     "Company": 0.937,
+     "Title": 0.924,
+     "Email": 0.89,
+     "Phone": 0.89
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 124,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4611552070000471,
+    "pred": {
+     "Name": "池田健太",
+     "Company": "株式会社瀬戸内マテリアル",
+     "Title": "人事部部長",
+     "Email": "ikeda@setouchi-m.com",
+     "Phone": "092-830-2049"
+    },
+    "conf": {
+     "Name": 0.96,
+     "Company": 0.933,
+     "Title": 0.882,
+     "Email": 0.92,
+     "Phone": 0.96
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 125,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.40456698299999516,
+    "pred": {
+     "Name": "",
+     "Company": "有限会社富士見企画",
+     "Title": "エンジニア",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.729,
+     "Title": 0.917,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 126,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.49723781400007283,
+    "pred": {
+     "Name": "Daisuke IKEDA",
+     "Company": "Hokuto Solutions Co., Ltd,",
+     "Title": "Engineering Dept. Consultant",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.96,
+     "Company": 0.902,
+     "Title": 0.867,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 127,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4699417900001208,
+    "pred": {
+     "Name": "高橋由美",
+     "Company": "有限会社さくらネットワーク",
+     "Title": "営業部プロジェクトマネージャー",
+     "Email": "yumi.takahashi@sakura-net.jp",
+     "Phone": "075-511-3468"
+    },
+    "conf": {
+     "Name": 0.68,
+     "Company": 0.928,
+     "Title": 0.942,
+     "Email": 0.905,
+     "Phone": 0.905
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 128,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.410026906999974,
+    "pred": {
+     "Name": "Koji NAKAMURA",
+     "Company": "Toa Systems K.K.",
+     "Title": "Product Manager",
+     "Email": "",
+     "Phone": "+81-6-6778-7471"
+    },
+    "conf": {
+     "Name": 0.92,
+     "Company": 0.917,
+     "Title": 0.955,
+     "Email": 0.0,
+     "Phone": 0.82
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 129,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.40375147800000377,
+    "pred": {
+     "Name": "Megumi Abe",
+     "Company": "有限会社未来テクノ Bos",
+     "Title": "",
+     "Email": "abe@mirai-tech.com",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.95,
+     "Company": 0.824,
+     "Title": 0.0,
+     "Email": 0.6,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 130,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4684345199998461,
+    "pred": {
+     "Name": "",
+     "Company": "合同会社日本データサービス",
+     "Title": "執行役員",
+     "Email": "tmaeda@nds.co.jp",
+     "Phone": "06-8960-6625"
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.942,
+     "Title": 0.71,
+     "Email": 0.69,
+     "Phone": 0.92
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 131,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.46651351699983934,
+    "pred": {
+     "Name": "Takuya WATANABE",
+     "Company": "Hokuto Solutions K.K.",
+     "Title": "Consultant",
+     "Email": "watanabe@hokuto-sol.com",
+     "Phone": "070-9325-3290"
+    },
+    "conf": {
+     "Name": 0.935,
+     "Company": 0.917,
+     "Title": 0.92,
+     "Email": 0.925,
+     "Phone": 0.91
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 132,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.482632803000115,
+    "pred": {
+     "Name": "山本拓也",
+     "Company": "合同会社ひかり医療機器",
+     "Title": "",
+     "Email": "",
+     "Phone": "075-209-5993"
+    },
+    "conf": {
+     "Name": 0.565,
+     "Company": 0.934,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.733
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 133,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.522403415999861,
+    "pred": {
+     "Name": "後藤浩二",
+     "Company": "株式会社青葉商",
+     "Title": "技術部システム課課長",
+     "Email": "goto@aoba.co.jp",
+     "Phone": "075-397-8650"
+    },
+    "conf": {
+     "Name": 0.84,
+     "Company": 0.775,
+     "Title": 0.947,
+     "Email": 0.9,
+     "Phone": 0.955
+    },
+    "ok": {
+     "Name": true,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 134,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4775557810000919,
+    "pred": {
+     "Name": "前田健太",
+     "Company": "株式会社大和精機",
+     "Title": "取締役",
+     "Email": "kenta_maeda@yamato-sk.co.jp",
+     "Phone": "075-288-1423"
+    },
+    "conf": {
+     "Name": 0.903,
+     "Company": 0.8,
+     "Title": 0.915,
+     "Email": 0.735,
+     "Phone": 0.905
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": true
+    }
+   },
+   {
+    "id": 135,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.45118449300002794,
+    "pred": {
+     "Name": "Hanako Abe",
+     "Company": "株式会社緑川化学",
+     "Title": "",
+     "Email": "h-abe@midori-chem.com",
+     "Phone": "052-684-1236"
+    },
+    "conf": {
+     "Name": 0.92,
+     "Company": 0.908,
+     "Title": 0.0,
+     "Email": 0.87,
+     "Phone": 0.93
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 136,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.37172896899983243,
+    "pred": {
+     "Name": "Naoki YAMADA",
+     "Company": "Toho Logistics Co., Ltd.",
+     "Title": "Senior Engineer",
+     "Email": "yamada@toho-log.com",
+     "Phone": "070-3466-8619"
+    },
+    "conf": {
+     "Name": 0.96,
+     "Company": 0.94,
+     "Title": 0.96,
+     "Email": 0.77,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 137,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4146047770000223,
+    "pred": {
+     "Name": "山本館",
+     "Company": "株式会社光電子工業",
+     "Title": "",
+     "Email": "ryo.yamamoto@hikari-d.co.jp",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.465,
+     "Company": 0.927,
+     "Title": 0.0,
+     "Email": 0.92,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": false
+    }
+   },
+   {
+    "id": 138,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.2134784589998162,
+    "pred": {
+     "Name": "",
+     "Company": "株式会社日本データサービス",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.864,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 139,
+    "kind": "photo",
+    "lang": "en",
+    "seconds": 0.32576137399996696,
+    "pred": {
+     "Name": "Takuya Yamaguchi",
+     "Company": "Aoba Trading K.K.",
+     "Title": "R&D Center CTO",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.96,
+     "Company": 0.907,
+     "Title": 0.953,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 140,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.4821405469999718,
+    "pred": {
+     "Name": "",
+     "Company": "株式会社新星電",
+     "Title": "マネージャー",
+     "Email": "fujita@shinsei-e.com",
+     "Phone": "092-698-2520"
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.915,
+     "Title": 0.926,
+     "Email": 0.86,
+     "Phone": 0.915
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 141,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.49049121600000944,
+    "pred": {
+     "Name": "小林拓也",
+     "Company": "有限会社大和精機",
+     "Title": "営業担当",
+     "Email": "kobayashi@yamato-sk.jp",
+     "Phone": "078-349-5869"
+    },
+    "conf": {
+     "Name": 0.885,
+     "Company": 0.834,
+     "Title": 0.465,
+     "Email": 0.913,
+     "Phone": 0.945
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 142,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.41387226100005137,
+    "pred": {
+     "Name": "佐々木翔太",
+     "Company": "合同会社大和精機",
+     "Title": "係長",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.787,
+     "Company": 0.729,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 143,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.5047813609999139,
+    "pred": {
+     "Name": "伊藤和也",
+     "Company": "合同会社光電子工業",
+     "Title": "",
+     "Email": "aro.ito@hikari-d.com",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.687,
+     "Company": 0.922,
+     "Title": 0.0,
+     "Email": 0.378,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   },
+   {
+    "id": 144,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.507525405000024,
+    "pred": {
+     "Name": "池田健太",
+     "Company": "株式会社緑川化学",
+     "Title": "技術部システム課主任",
+     "Email": "k-ikeda@midori-chem.jp",
+     "Phone": "092-602-4078"
+    },
+    "conf": {
+     "Name": 0.96,
+     "Company": 0.888,
+     "Title": 0.867,
+     "Email": 0.83,
+     "Phone": 0.92
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 145,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.42867865300013364,
+    "pred": {
+     "Name": "Aya MORI",
+     "Company": "Sakura Network K.K.",
+     "Title": "Engineer",
+     "Email": "aya.mori@sakura-net.jp",
+     "Phone": "+81-3-1040-9689"
+    },
+    "conf": {
+     "Name": 0.95,
+     "Company": 0.927,
+     "Title": 0.96,
+     "Email": 0.925,
+     "Phone": 0.89
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 146,
+    "kind": "scan",
+    "lang": "en",
+    "seconds": 0.4419814289999522,
+    "pred": {
+     "Name": "Kenichi Ogawa",
+     "Company": "Hikari Denshi Inc.",
+     "Title": "Product Manager",
+     "Email": "ogawa@hikari-d.com",
+     "Phone": "+81-52-234-4480"
+    },
+    "conf": {
+     "Name": 0.9,
+     "Company": 0.917,
+     "Title": 0.92,
+     "Email": 0.91,
+     "Phone": 0.895
+    },
+    "ok": {
+     "Name": true,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 147,
+    "kind": "scan",
+    "lang": "ja",
+    "seconds": 0.41316983299998356,
+    "pred": {
+     "Name": "Megumi Mori",
+     "Company": "株式会社日本データサービス",
+     "Title": "開発本部エンジニア",
+     "Email": "megumi.mori@nds.jp",
+     "Phone": "075-199-9653"
+    },
+    "conf": {
+     "Name": 0.92,
+     "Company": 0.929,
+     "Title": 0.95,
+     "Email": 0.915,
+     "Phone": 0.955
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": true,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 148,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.45248994200005654,
+    "pred": {
+     "Name": "",
+     "Company": "株式会社日本データサービス",
+     "Title": "",
+     "Email": "suzuki@nds.co.jp",
+     "Phone": "075-840-9287"
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.936,
+     "Title": 0.0,
+     "Email": 0.91,
+     "Phone": 0.95
+    },
+    "ok": {
+     "Name": false,
+     "Company": true,
+     "Title": false,
+     "Email": true,
+     "Phone": true
+    }
+   },
+   {
+    "id": 149,
+    "kind": "photo",
+    "lang": "ja",
+    "seconds": 0.16245433099993534,
+    "pred": {
+     "Name": "",
+     "Company": "",
+     "Title": "",
+     "Email": "",
+     "Phone": ""
+    },
+    "conf": {
+     "Name": 0.0,
+     "Company": 0.0,
+     "Title": 0.0,
+     "Email": 0.0,
+     "Phone": 0.0
+    },
+    "ok": {
+     "Name": false,
+     "Company": false,
+     "Title": false,
+     "Email": false,
+     "Phone": false
+    }
+   }
+  ]
+ }
+}
