@@ -3,8 +3,10 @@ from __future__ import annotations
 
 import io
 import os
+from pathlib import Path
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi.responses import FileResponse
 from PIL import Image, UnidentifiedImageError
 
 from . import __version__
@@ -13,6 +15,7 @@ from .store import upsert_contact
 
 MAX_BYTES = 10 * 1024 * 1024
 CONTACTS_PATH = os.getenv("MEISHI_CONTACTS", "data/contacts.xlsx")
+UI_PAGE = Path(__file__).with_name("ui.html")
 
 app = FastAPI(title="Meishi OCR CRM", version=__version__)
 
@@ -25,6 +28,11 @@ def _read_image(upload: UploadFile) -> Image.Image:
         return Image.open(io.BytesIO(data)).convert("RGB")
     except UnidentifiedImageError:
         raise HTTPException(415, "Not a supported image file") from None
+
+
+@app.get("/", include_in_schema=False)
+def ui() -> FileResponse:
+    return FileResponse(UI_PAGE)
 
 
 @app.get("/health")

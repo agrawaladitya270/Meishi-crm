@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meishi OCR</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --text: #1b1f24; --muted: #5f6b7a; --border: #dde2e8;
+    --accent: #2f5bd3; --accent-text: #ffffff; --warn-bg: #fff4e0; --warn-text: #8a5300;
+    --ok: #1d7a46; --err: #b42318;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171b; --panel: #1d2127; --text: #e8ebef; --muted: #9aa5b1; --border: #303740;
+      --accent: #7d9cf2; --accent-text: #0d1117; --warn-bg: #3a2c12; --warn-text: #f5c26b;
+      --ok: #5cc98a; --err: #ff8a80;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 system-ui, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", Meiryo, sans-serif;
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { margin: 0; font-size: 22px; }
+  h2 { margin: 0 0 4px; font-size: 16px; }
+  .sub { margin: 4px 0 24px; color: var(--muted); }
+  .grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .drop {
+    display: flex; align-items: center; justify-content: center; min-height: 220px; padding: 12px;
+    border: 2px dashed var(--border); border-radius: 10px; cursor: pointer;
+    text-align: center; color: var(--muted); overflow: hidden;
+  }
+  .drop.over, .drop:focus-within { border-color: var(--accent); }
+  .drop img { display: block; max-width: 100%; max-height: 320px; border-radius: 4px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  button {
+    font: inherit; padding: 8px 14px; border-radius: 8px; cursor: pointer;
+    border: 1px solid var(--border); background: var(--panel); color: var(--text);
+  }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  #status { min-height: 1.5em; margin: 12px 0 0; color: var(--muted); }
+  #status.ok { color: var(--ok); }
+  #status.error { color: var(--err); }
+  dl { margin: 0; }
+  .row { display: grid; grid-template-columns: 90px 1fr; gap: 8px; padding: 10px 0; border-top: 1px solid var(--border); }
+  .row:first-child { border-top: 0; }
+  dt { color: var(--muted); }
+  dd { margin: 0; overflow-wrap: anywhere; }
+  .missing {
+    display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 13px;
+    background: var(--warn-bg); color: var(--warn-text);
+  }
+  footer { margin-top: 24px; color: var(--muted); font-size: 13px; }
+  a { color: var(--accent); }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Meishi OCR</h1>
+  <p class="sub">Read a business card (名刺) and save it to your contacts.</p>
+  <div class="grid">
+    <section class="panel">
+      <label class="drop" id="drop">
+        <input type="file" id="file" accept="image/*" class="sr-only">
+        <span id="hint">Drop a card image here, click to choose one, or paste it</span>
+        <img id="preview" alt="Selected card" hidden>
+      </label>
+      <div class="actions">
+        <button class="primary" id="read" disabled>Read card</button>
+        <button id="save" disabled>Read &amp; save to contacts</button>
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="panel">
+      <h2>Details</h2>
+      <dl id="fields"></dl>
+    </section>
+  </div>
+  <footer>Saved contacts go to <code>data/contacts.xlsx</code> · API docs at <a href="/docs">/docs</a></footer>
+</main>
+<script>
+  const FIELDS = ["Name", "Company", "Title", "Email", "Phone"];
+  const el = (id) => document.getElementById(id);
+  const input = el("file"), drop = el("drop"), preview = el("preview"), hint = el("hint");
+  const readBtn = el("read"), saveBtn = el("save"), status = el("status"), list = el("fields");
+  let card = null;
+
+  function setStatus(text, kind = "") {
+    status.textContent = text;
+    status.className = kind;
+  }
+
+  // OCR text goes in via textContent only, never innerHTML
+  function render(fields = {}, review = []) {
+    list.replaceChildren(...FIELDS.map((f) => {
+      const row = document.createElement("div");
+      const dt = document.createElement("dt");
+      const dd = document.createElement("dd");
+      row.className = "row";
+      dt.textContent = f;
+      if (fields[f]) {
+        dd.textContent = fields[f];
+      } else if (review.includes(f)) {
+        const badge = document.createElement("span");
+        badge.className = "missing";
+        badge.textContent = "Not found, check the card";
+        dd.append(badge);
+      } else {
+        dd.textContent = "—";
+      }
+      row.append(dt, dd);
+      return row;
+    }));
+  }
+
+  function pick(file) {
+    if (!file) return;
+    if (!file.type.startsWith("image/")) return setStatus("Please choose an image file.", "error");
+    card = file;
+    if (preview.src) URL.revokeObjectURL(preview.src);
+    preview.src = URL.createObjectURL(file);
+    preview.hidden = false;
+    hint.hidden = true;
+    readBtn.disabled = saveBtn.disabled = false;
+    render();
+    setStatus(file.name);
+  }
+
+  async function send(path) {
+    const body = new FormData();
+    body.append("file", card);
+    readBtn.disabled = saveBtn.disabled = true;
+    setStatus("Reading card…");
+    try {
+      const res = await fetch(path, { method: "POST", body });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(typeof data.detail === "string" ? data.detail : `Server error (${res.status})`);
+      }
+      render(data.fields, data.needs_review);
+      if (path === "/contacts") {
+        setStatus(data.status === "inserted" ? "Saved as a new contact." : "Updated an existing contact.", "ok");
+      } else {
+        setStatus(`Done in ${data.seconds} s.`, "ok");
+      }
+    } catch (err) {
+      setStatus(err.message, "error");
+    } finally {
+      readBtn.disabled = saveBtn.disabled = false;
+    }
+  }
+
+  input.addEventListener("change", () => pick(input.files[0]));
+  drop.addEventListener("dragover", (e) => { e.preventDefault(); drop.classList.add("over"); });
+  drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+  drop.addEventListener("drop", (e) => {
+    e.preventDefault();
+    drop.classList.remove("over");
+    pick(e.dataTransfer.files[0]);
+  });
+  document.addEventListener("paste", (e) => pick(e.clipboardData.files[0]));
+  readBtn.addEventListener("click", () => send("/extract"));
+  saveBtn.addEventListener("click", () => send("/contacts"));
+  render();
+</script>
+</body>
+</html>

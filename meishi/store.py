@@ -19,6 +19,7 @@ def upsert_contact(path: str | Path, fields: dict, source: str) -> str:
     if path.exists():
         wb = load_workbook(path)
     else:
+        path.parent.mkdir(parents=True, exist_ok=True)
         wb = Workbook()
         wb.active.append(HEADER)
     ws = wb.active

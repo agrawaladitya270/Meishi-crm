@@ -15,6 +15,12 @@ def test_health():
     assert client.get("/health").json()["status"] == "ok"
 
 
+def test_ui_page():
+    r = client.get("/")
+    assert r.status_code == 200
+    assert "text/html" in r.headers["content-type"]
+
+
 def test_rejects_non_images():
     r = client.post("/extract", files={"file": ("x.txt", b"hello", "text/plain")})
     assert r.status_code == 415
