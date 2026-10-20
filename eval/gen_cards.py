@@ -9,7 +9,12 @@ The dev and test splits use different seeds, and the test split also draws some 
 (titles, departments, companies, cities) that never appear in dev, so rules tuned on dev
 are checked on unseen data.
 
+--style corporate makes cards modelled on a real phone photo instead: a sideways URL banner, logo
+and tagline, departments beside a big (often katakana) name with romaji above it, an office label,
+TEL(代)/FAX, and a licence-number footer, photographed on a light desk and often turned sideways.
+
 Usage:  python eval/gen_cards.py --out data/test --n 200 --seed 2 --split test
+        python eval/gen_cards.py --out data/corporate --n 60 --seed 4 --split test --style corporate
 """
 from __future__ import annotations
 
@@ -77,6 +82,17 @@ CITIES_SHARED = [("東京都千代田区丸の内", "Marunouchi, Chiyoda-ku, Tok
 CITIES_TEST_ONLY = [("福岡県福岡市博多区博多駅前", "Hakataekimae, Hakata-ku, Fukuoka", "812-0011", "092"),
                     ("京都府京都市下京区烏丸通", "Karasuma-dori, Shimogyo-ku, Kyoto", "600-8216", "075")]
 
+# --style corporate
+CORP_TAGLINES = ["TECHNICAL SOLUTION", "SYSTEM INTEGRATION", "ENGINEERING SERVICE", "SMART FACTORY"]
+CORP_DEPTS = [("設計開発部", "情報処理課"), ("営業本部", "第一営業課"), ("技術部", "システム課"),
+              ("管理本部", "総務課"), ("製造部", "品質管理課")]
+OFFICES = ["本社", "東京事業所", "大阪事業所", "名古屋営業所", "神戸事業所"]
+# foreign names written in katakana (family name first), with the romaji printed above each part
+KATAKANA_SURNAMES = [("シャルマ", "SHARMA"), ("グエン", "NGUYEN"), ("ガルシア", "GARCIA"), ("リー", "LEE"),
+                     ("ミラー", "MILLER"), ("パテル", "PATEL")]
+KATAKANA_GIVEN = [("アミット", "AMIT"), ("プリヤ", "PRIYA"), ("ミン", "MINH"), ("アンナ", "ANNA"),
+                  ("ダニエル", "DANIEL"), ("ラフル", "RAHUL")]
+
 
 def pools(split: str) -> dict:
     test = split == "test"
@@ -139,6 +155,87 @@ def make_content(rng: random.Random, p: dict, lang: str) -> dict:
         "_url": f"https://www.{domain}" if rng.random() < 0.5 else None,
         "_email_label": rng.choice(["E-mail:", "Email:", "Mail:", ""]),
     }
+
+
+def make_corporate(rng: random.Random, p: dict) -> dict:
+    core_ja, _, slug = rng.choice(p["companies"])
+    city_ja, _, postal, area = rng.choice(p["cities"])
+    domain = slug + rng.choice([".co.jp", ".com"])
+    if rng.random() < 0.5:
+        sur, given = rng.choice(KATAKANA_SURNAMES), rng.choice(KATAKANA_GIVEN)
+    else:
+        (sur_ja, sur_en), (given_ja, given_en) = rng.choice(SURNAMES), rng.choice(GIVEN)
+        sur, given = (sur_ja, sur_en.upper()), (given_ja, given_en.upper())
+    pref = rng.randint(10, 47)
+    return {
+        "Name": f"{sur[0]} {given[0]}",
+        "Company": rng.choice([f"{core_ja}株式会社", f"株式会社{core_ja}"]),
+        "Title": rng.choice(p["titles_ja"]) if rng.random() < 0.5 else "",  # often departments only
+        "Email": f"{given[1][0].lower()}_{sur[1].lower()}@{domain}",
+        "Phone": phone_number(rng, area),
+        "_romaji": (sur[1], given[1]), "_depts": rng.choice(CORP_DEPTS), "_fax": phone_number(rng, area),
+        "_url": f"https://{domain}", "_tagline": rng.choice(CORP_TAGLINES),
+        "_address": f"{rng.choice(OFFICES)} 〒{postal} {city_ja}"
+                    f"{rng.randint(1, 5)}丁目{rng.randint(1, 20)}番{rng.randint(1, 30)}号",
+        "_building": f"{rng.choice(['駅前', '中央', '第一', 'センター'])}ビル{rng.randint(2, 15)}階",
+        "_licence": f"一般労働者派遣事業 派{pref}-{rng.randint(100000, 999999)} / "
+                    f"有料職業紹介事業 {pref}-ユ-{rng.randint(10000, 99999):06d}",
+    }
+
+
+def render_corporate(rng: random.Random, c: dict) -> Image.Image:
+    W, H = 1050, 600
+    paper = tuple(rng.randint(245, 255) for _ in range(3))
+    img = Image.new("RGB", (W, H), paper)
+    d = ImageDraw.Draw(img)
+    accent = rng.choice([(35, 55, 140), (20, 90, 60), (150, 30, 40)])
+    ink = (25, 25, 25)
+    font = rng.choice(FONTS)
+
+    def put(text, xy, size, fill=ink, max_w=None):
+        d.text(xy, text, font=fit_font(d, text, font, size, max_w or W - xy[0] - 40), fill=fill)
+
+    # URL banner down the left edge, printed sideways
+    band = 90
+    strip = Image.new("RGB", (H, band), accent)
+    sd = ImageDraw.Draw(strip)
+    sd.text((40, 18), c["_url"], font=fit_font(sd, c["_url"], font, 44, H - 80), fill="white")
+    img.paste(strip.rotate(90, expand=True), (0, 0))
+    # logo, tagline, company
+    d.ellipse([140, 40, 205, 100], outline=accent, width=12)
+    d.ellipse([180, 40, 245, 100], outline=accent, width=12)
+    put(c["_tagline"], (265, 55), 26, fill=accent)
+    put(c["Company"], (140, 115), 46)
+    # departments (and maybe a title) on the left, the big name to the right with romaji above
+    for i, line in enumerate(t for t in (*c["_depts"], c["Title"]) if t):
+        put(line, (140, 240 + 35 * i), 27, max_w=245)
+    x = 400
+    for part, roman in zip(c["Name"].split(" "), c["_romaji"], strict=True):
+        name_font = fit_font(d, part, font, 62, 260)
+        put(roman, (x + 8, 210), 20)
+        d.text((x, 240), part, font=name_font, fill=ink)
+        x += d.textlength(part, font=name_font) + 55
+    # office address, building, phone line, email, licence footer
+    put(c["_address"], (140, 375), 22, max_w=700)
+    put(c["_building"], (250, 407), 22)
+    put(f"TEL {c['Phone']}(代)    FAX {c['_fax']}", (250, 439), 22, max_w=560)
+    put(f"e-mail {c['Email']}", (250, 471), 22, max_w=560)
+    put(c["_licence"], (125, 548), 19, max_w=W - 165)
+    # QR-code-like block and a round mark
+    cell, qx, qy = 6, 870, 300
+    grid = [[rng.random() < 0.5 for _ in range(21)] for _ in range(21)]
+    for r0, c0 in ((0, 0), (0, 14), (14, 0)):  # the three finder squares
+        for r in range(7):
+            for col in range(7):
+                grid[r0 + r][c0 + col] = r in (0, 6) or col in (0, 6) or (2 <= r <= 4 and 2 <= col <= 4)
+    for r in range(21):
+        for col in range(21):
+            if grid[r][col]:
+                d.rectangle([qx + col * cell, qy + r * cell, qx + col * cell + cell - 1, qy + r * cell + cell - 1],
+                            fill=ink)
+    d.ellipse([860, 450, 950, 540], outline=accent, width=5)
+    put("P", (888, 462), 52, fill=accent)
+    return img
 
 
 def fit_font(draw, text, path_idx, size, max_w):
@@ -204,11 +301,13 @@ def render(rng: random.Random, c: dict, lang: str) -> tuple[Image.Image, str]:
     return img, layout
 
 
-def photo_degrade(rng: random.Random, card: Image.Image) -> Image.Image:
-    """Make a clean card look like a phone photo."""
+def photo_degrade(rng: random.Random, card: Image.Image, light_desk: bool = False) -> Image.Image:
+    """Make a clean card look like a phone photo. light_desk: a pale desk (hard to tell from a white
+    card) and full phone-camera resolution."""
     W, H = card.size
     m = 140
-    bgc = np.array([rng.randint(40, 140)] * 3) + np.array([rng.randint(-15, 15) for _ in range(3)])
+    desk = rng.randint(195, 225) if light_desk else rng.randint(40, 140)
+    bgc = np.array([desk] * 3) + np.array([rng.randint(-15, 15) for _ in range(3)])
     canvas = np.full((H + 2 * m, W + 2 * m, 3), np.clip(bgc, 0, 255), dtype=np.uint8)
     canvas[m:m + H, m:m + W] = np.array(card)
     h, w = canvas.shape[:2]
@@ -225,7 +324,7 @@ def photo_degrade(rng: random.Random, card: Image.Image) -> Image.Image:
         grad = grad[:, ::-1]
     out = np.clip(out.astype(np.float32) * grad + rng.gauss(0, rng.uniform(3, 9)), 0, 255).astype(np.uint8)
     img = Image.fromarray(out).filter(ImageFilter.GaussianBlur(rng.uniform(0.6, 1.3)))
-    scale = rng.uniform(0.55, 0.8)
+    scale = rng.uniform(1.3, 2.0) if light_desk else rng.uniform(0.55, 0.8)
     return img.resize((int(w * scale), int(h * scale)), Image.LANCZOS)
 
 
@@ -235,6 +334,7 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=100)
     ap.add_argument("--seed", type=int, default=1)
     ap.add_argument("--split", choices=["dev", "test"], default="dev")
+    ap.add_argument("--style", choices=["classic", "corporate"], default="classic")
     args = ap.parse_args()
     rng = random.Random(args.seed)
     p = pools(args.split)
@@ -242,11 +342,19 @@ def main() -> None:
     (out / "images").mkdir(parents=True, exist_ok=True)
     with open(out / "labels.jsonl", "w", encoding="utf-8") as f:
         for i in range(args.n):
-            lang = "en" if rng.random() < 0.2 else "ja"
-            c = make_content(rng, p, lang)
-            card, layout = render(rng, c, lang)
-            kind = "photo" if rng.random() < 0.5 else "scan"
-            img = photo_degrade(rng, card) if kind == "photo" else card
+            if args.style == "corporate":
+                lang, c = "ja", make_corporate(rng, p)
+                card, layout = render_corporate(rng, c), "corporate"
+                kind = "photo" if rng.random() < 0.7 else "scan"
+                img = card
+                if kind == "photo":  # like the real photo: often taken sideways
+                    img = photo_degrade(rng, card, light_desk=True).rotate(rng.choice([0, 90, 270]), expand=True)
+            else:
+                lang = "en" if rng.random() < 0.2 else "ja"
+                c = make_content(rng, p, lang)
+                card, layout = render(rng, c, lang)
+                kind = "photo" if rng.random() < 0.5 else "scan"
+                img = photo_degrade(rng, card) if kind == "photo" else card
             fname = f"card_{i:04d}.jpg"
             img.save(out / "images" / fname, quality=rng.randint(55, 85) if kind == "photo" else 92)
             label = {k: v for k, v in c.items() if not k.startswith("_")}

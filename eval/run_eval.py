@@ -54,6 +54,8 @@ def _n(s: str) -> str:
 
 
 def correct(field: str, pred: str, gt: str) -> bool:
+    if not gt:  # the card has no such field (e.g. departments but no job title)
+        return not pred
     if not pred:
         return False
     if field == "Phone":
