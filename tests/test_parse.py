@@ -28,6 +28,7 @@ def test_email_repairs_common_ocr_damage():
     assert repair_email_line("misaki, hashimoto@mi rai-tech. jp") == "misaki.hashimoto@mirai-tech.jp"
     assert repair_email_line("ikeda@hikari-d.cojp") == "ikeda@hikari-d.co.jp"
     assert find_email([L("E-mail: Yumi.Ito@toa-sys.com")])[0] == "yumi.ito@toa-sys.com"
+    assert repair_email_line("e-mail k_ tanaka@abc.co.jp") == "k_tanaka@abc.co.jp"
 
 
 def test_name_is_the_tallest_name_like_line_not_the_department():
@@ -45,6 +46,14 @@ def test_company_and_title():
     lines = [L("Mail: taro@abc.co.jp"), L("合同会社未来テクノロジー"), L("開発本部 主任研究員")]
     assert find_company(lines)[0] == "合同会社未来テクノロジー"
     assert "主任研究員" in find_title(lines)[0]
+
+
+def test_company_suffix_with_misread_character():
+    assert find_company([L("TECHNICAL SOLUTION"), L("東亜工業株式雲社")])[0] == "東亜工業株式会社"
+
+
+def test_logo_read_as_hiragana_is_not_the_name():
+    assert find_name([L("のの", 150), L("スミス ジョン", 130)])[0] == "スミスジョン"
 
 
 def test_engineering_department_is_not_a_title():

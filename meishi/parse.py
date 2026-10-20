@@ -10,6 +10,8 @@ FIELDS = ("Name", "Company", "Title", "Email", "Phone")
 COMPANY_RE = re.compile(
     r"(株式会社|有限会社|合同会社|合資会社|\(株\)|\(有\)|\bCo\.?,?\s*Ltd\b|\bLtd\b|\bInc\b|"
     r"\bCorporation\b|\bCorp\b|\bK\.?K\.|\bLLC\b|\bGmbH\b)", re.I)
+# OCR often misreads 会 in 株式会社 (as 雲, 亡 ...); no other character fits there
+COMPANY_FIX = re.compile(r"(株式|有限|合同|合資)[^\s会]社")
 
 # Common Japanese and English job titles (general knowledge, not taken from the test data)
 TITLES_JA = ["代表取締役社長", "代表取締役", "取締役社長", "取締役", "執行役員", "副社長", "社長", "会長",
@@ -35,6 +37,7 @@ PHONE_RE = re.compile(r"(?:\+81[\s-]?\(?0?\)?\d{1,4}|\(?0\d{1,4}\)?)[\s-]?\d{1,4
 FAX_LABEL = re.compile(r"(fax|pax|ファックス|ファクス|\bF\b)\W*$", re.I)  # OCR often reads FAX as PAX
 MOBILE_LABEL = re.compile(r"(携帯|mobile|mob|\bM\b)\W*$", re.I)
 JA_NAME_RE = re.compile(rf"[{CJK}]{{2,8}}")
+HIRAGANA_ONLY = re.compile(r"[぀-ゟ]+")  # a misread logo, not a name (names have kanji/katakana)
 EN_NAME_RE = re.compile(r"[A-Z][a-zA-Z'-]+(?: [A-Z][a-zA-Z'-]+){1,2}")
 
 
@@ -56,9 +59,11 @@ def repair_email_line(text: str) -> str:
     right = re.sub(r"\s+", "", right)                      # a domain never contains spaces
     tokens = re.split(r"[\s:：]+", left)
     local = tokens[-1] if tokens else ""
-    # a dot read as a space: "taro yamada@" -> "taro.yamada@" (not for labels like "Mail")
+    # a dot read as a space: "taro yamada@" -> "taro.yamada@" (not for labels like "Mail");
+    # next to _ or - the space is just noise: "r_ madan@" -> "r_madan@"
     if len(tokens) >= 2 and re.fullmatch(r"[a-z0-9_-]+", tokens[-2]) and tokens[-2] not in LABEL_WORDS:
-        local = f"{tokens[-2]}.{local}"
+        sep = "" if tokens[-2][-1] in "_-" or local[:1] in ("_", "-") else "."
+        local = f"{tokens[-2]}{sep}{local}"
     email = f"{local}@{right}"
     for pattern, repl in TLD_FIXES:
         email = pattern.sub(repl, email)
@@ -92,8 +97,9 @@ def find_phone(lines: list[Line]) -> tuple[str, float]:
 
 def find_company(lines: list[Line]) -> tuple[str, float]:
     for ln in lines:
-        if COMPANY_RE.search(ln.text) and not CONTACT_RE.search(ln.text) and not ADDRESS_RE.search(ln.text):
-            return ln.text, ln.conf
+        text = COMPANY_FIX.sub(r"\1会社", ln.text)
+        if COMPANY_RE.search(text) and not CONTACT_RE.search(text) and not ADDRESS_RE.search(text):
+            return text, ln.conf
     return "", 0.0
 
 
@@ -105,10 +111,14 @@ def find_title(lines: list[Line]) -> tuple[str, float]:
     return "", 0.0
 
 
+def _ja_name_like(text: str) -> bool:
+    t = text.replace(" ", "")
+    return bool(JA_NAME_RE.fullmatch(t)) and not HIRAGANA_ONLY.fullmatch(t)
+
+
 def find_name(lines: list[Line]) -> tuple[str, float]:
     """The name is usually the biggest text on the card: pick the tallest name-like line."""
-    ja = [ln for ln in lines
-          if JA_NAME_RE.fullmatch(ln.text.replace(" ", "")) and not _is_other_field(ln.text)]
+    ja = [ln for ln in lines if _ja_name_like(ln.text) and not _is_other_field(ln.text)]
     if ja:
         best = max(ja, key=lambda ln: ln.height)
         return best.text, best.conf
