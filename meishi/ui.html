@@ -97,6 +97,13 @@
     status.className = kind;
   }
 
+  function badge(text) {
+    const span = document.createElement("span");
+    span.className = "missing";
+    span.textContent = text;
+    return span;
+  }
+
   // OCR text goes in via textContent only, never innerHTML
   function render(fields = {}, review = []) {
     list.replaceChildren(...FIELDS.map((f) => {
@@ -107,11 +114,9 @@
       dt.textContent = f;
       if (fields[f]) {
         dd.textContent = fields[f];
+        if (review.includes(f)) dd.append(" ", badge("Check this"));  // filled in by a fallback
       } else if (review.includes(f)) {
-        const badge = document.createElement("span");
-        badge.className = "missing";
-        badge.textContent = "Not found, check the card";
-        dd.append(badge);
+        dd.append(badge("Not found, check the card"));
       } else {
         dd.textContent = "—";
       }
