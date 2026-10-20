@@ -29,6 +29,8 @@ def test_email_repairs_common_ocr_damage():
     assert repair_email_line("ikeda@hikari-d.cojp") == "ikeda@hikari-d.co.jp"
     assert find_email([L("E-mail: Yumi.Ito@toa-sys.com")])[0] == "yumi.ito@toa-sys.com"
     assert repair_email_line("e-mail k_ tanaka@abc.co.jp") == "k_tanaka@abc.co.jp"
+    assert repair_email_line("e-mailk_tanaka@abc.co.jp") == "k_tanaka@abc.co.jp"
+    assert repair_email_line("mail@abc.co.jp") == "mail@abc.co.jp"  # a real address, not a label
 
 
 def test_name_is_the_tallest_name_like_line_not_the_department():

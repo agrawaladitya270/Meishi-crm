@@ -58,7 +58,8 @@ def repair_email_line(text: str) -> str:
     left = re.sub(r"\s*\.\s*", ".", left.rstrip())
     right = re.sub(r"\s+", "", right)                      # a domain never contains spaces
     tokens = re.split(r"[\s:：]+", left)
-    local = tokens[-1] if tokens else ""
+    # the label glued onto the address when OCR drops the space: "e-mailtaro@" -> "taro@"
+    local = re.sub(r"^e-?mail(?=\w)", "", tokens[-1], flags=re.I) if tokens else ""
     # a dot read as a space: "taro yamada@" -> "taro.yamada@" (not for labels like "Mail");
     # next to _ or - the space is just noise: "r_ madan@" -> "r_madan@"
     if len(tokens) >= 2 and re.fullmatch(r"[a-z0-9_-]+", tokens[-2]) and tokens[-2] not in LABEL_WORDS:
