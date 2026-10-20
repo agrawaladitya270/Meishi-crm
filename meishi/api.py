@@ -7,7 +7,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse
-from PIL import Image, UnidentifiedImageError
+from PIL import Image, ImageOps, UnidentifiedImageError
 
 from . import __version__
 from .pipeline import extract
@@ -25,7 +25,8 @@ def _read_image(upload: UploadFile) -> Image.Image:
     if len(data) > MAX_BYTES:
         raise HTTPException(413, "Image larger than 10 MB")
     try:
-        return Image.open(io.BytesIO(data)).convert("RGB")
+        # phone photos store their rotation as an EXIF tag; apply it so we see what the user sees
+        return ImageOps.exif_transpose(Image.open(io.BytesIO(data))).convert("RGB")
     except UnidentifiedImageError:
         raise HTTPException(415, "Not a supported image file") from None
 
